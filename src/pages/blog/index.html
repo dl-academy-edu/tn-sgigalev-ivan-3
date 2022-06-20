@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Blog</title>
+	<link rel="stylesheet" href="../../common.css">
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="../../static/fonts/fonts.css">
+	<meta name="description" content="Портфолио Жигалева Ивана. Страничка с моими видео">
+	<meta name="keywords" content="Подпишись на мой youtube канал Бирлогич">
+</head>
+
+<body>
+
+	@@include('./header/index.html')
+
+	<main class="main">
+		<div class="container">
+			<h1 class="blog__title section__title">My blog</h1>
+			<div class="main__inputs">
+				<form class="inputs">
+					<div class="input__forms">
+						<div class="input__tags">
+							<p class="input__title">Tags</p>
+							<div class="input__check">
+								<input type="checkbox" id="checkbox_1" class="input__checkbox checkbox_1"><label
+									for="checkbox_1"></label>
+								<input type="checkbox" id="checkbox_2" class="input__checkbox checkbox_2"><label
+									for="checkbox_2"></label>
+								<input type="checkbox" id="checkbox_3" class="input__checkbox checkbox_3"><label
+									for="checkbox_3"></label>
+								<input type="checkbox" id="checkbox_4" class="input__checkbox checkbox_4"><label
+									for="checkbox_4"></label>
+								<input type="checkbox" id="checkbox_5" class="input__checkbox checkbox_5"><label
+									for="checkbox_5"></label>
+								<input type="checkbox" id="checkbox_6" class="input__checkbox checkbox_6"><label
+									for="checkbox_6"></label>
+								<input type="checkbox" id="checkbox_7" class="input__checkbox checkbox_7"><label
+									for="checkbox_7"></label>
+								<input type="checkbox" id="checkbox_8" class="input__checkbox checkbox_8"><label
+									for="checkbox_8"></label>
+							</div>
+						</div>
+						<div class="input__views">
+							<p class="input__title">Views</p>
+							<div class="input__radio">
+								<input type="radio" id="viewChoice" class="input__view" name="view">
+								<label for="viewChoice" class="text__general">100-500</label>
+							</div>
+							<div class="input__radio">
+								<input type="radio" id="viewChoice1" class="input__view" name="view">
+								<label for="viewChoice1" class="text__general">500-100</label>
+							</div>
+							<div class="input__radio">
+								<input type="radio" id="viewChoice2" class="input__view" name="view">
+								<label for="viewChoice2" class="text__general">1000-2000</label>
+							</div>
+						</div>
+						<div class="input__comments">
+							<p class="input__title">Comments</p>
+							<div class="input__comment">
+								<input type="checkbox" id="comentChoice" class="comments">
+								<label for="comentChoice" class="text__general">0</label>
+							</div>
+							<div class="input__comment">
+								<input type="checkbox" id="comentChoice1" class="comments">
+								<label for="comentChoice1" class="text__general">0-1</label>
+							</div>
+							<div class="input__comment">
+								<input type="checkbox" id="comentChoice2" class="comments">
+								<label for="comentChoice2" class="text__general">1-50</label>
+							</div>
+						</div>
+						<div class="input__shows">
+							<p class="input__title">How show?</p>
+							<div class="show">
+								<input type="radio" id="showChoice" class="input__show" name="show">
+								<label for="showChoice" class="text__general">show 5</label>
+							</div>
+							<div class="show">
+								<input type="radio" id="showChoice1" class="input__show" name="show">
+								<label for="showChoice1" class="text__general">show 10</label>
+							</div>
+						</div>
+						<div class="input__sorts">
+							<p class="input__title">Sort by</p>
+							<div class="sort">
+								<input type="radio" id="sortChoice" class="input__sort" name="sort">
+								<label for="sortChoice" class="text__general">date</label>
+							</div>
+							<div class="sort">
+								<input type="radio" id="sortChoice1" class="input__sort" name="sort">
+								<label for="sortChoice1" class="text__general">title</label>
+							</div>
+							<div class="sort">
+								<input type="radio" id="sortChoice2" class="input__sort" name="sort">
+								<label for="sortChoice2" class="text__general">views</label>
+							</div>
+						</div>
+						<div class="input__reset">
+							<p class="reset__title text__general_ltl">reset form</p>
+							<button type="submit" class="input__button">
+								<p class="text__general_bold">Reset</p>
+							</button>
+						</div>
+					</div>
+					<div class="input__text">
+						<input type="text" id="input__text" name="text">
+						<label for="input__text" class="text__general"><button type="submit" class="input__button">
+								<p class="text__general_bold">Search</p>
+							</button></label>
+					</div>
+				</form>
+			</div>
+			<div class="main__blog">
+				<div class="blog__column">
+					<div class="blog__item">
+						<div class="item__photo">
+							<img src="../../static/images/blog/dog.png" alt="dog">
+						</div>
+						<div class="item__column">
+							<div class="item__tags">
+								<div class="tag__wrapper">
+									<img src="../../static/images/icons/tag__orange.svg" alt="">
+								</div>
+								<div class="tag__wrapper">
+									<img src="../../static/images/icons/tag__orange.svg" alt="">
+								</div>
+							</div>
+							<div class="item__properties">
+								<span class="property__data">20.01.2020</span>
+								<span class="property__views">223 views</span>
+								<span class="property__comments">97 comments</span>
+							</div>
+							<div class="item__text">
+								<p class="item__title text__blog_title text__blog_title">This is my new dog.</p>
+								<p class="item__subtitle">Duis sit odio dui pretium suspendisse malesuada sit leo in. Massa nec
+									eget etiam tellus ac. Sodales nibh pellentesque donec eu ultrices tortor condimentum massa.
+								</p>
+								<a href="#" class="item__link text__general_bold text__general_bold">Go to this post</a>
+
+							</div>
+						</div>
+					</div>
+					<div class="blog__item">
+						<div class="item__photo">
+							<img src="../../static/images/blog/roosters.png" alt="dog">
+						</div>
+						<div class="item__column">
+							<div class="item__tags">
+								<div class="tag__wrapper">
+									<img src="../../static/images/icons/tag__orange.svg" alt="">
+								</div>
+								<div class="tag__wrapper">
+									<img src="../../static/images/icons/tag__orange.svg" alt="">
+								</div>
+							</div>
+							<div class="item__properties">
+								<span class="property__data">17.01.2020</span>
+								<span class="property__views">12 views</span>
+								<span class="property__comments">0 comments</span>
+							</div>
+							<div class="item__text">
+								<p class="item__title text__blog_title">Why do roosters scream in the morning?</p>
+								<p class="item__subtitle">Erat nunc parturient feugiat egestas adipiscing erat eu. Non neque mi
+									volutpat et lectus.
+								</p>
+								<a href="#" class="item__link text__general_bold">Go to this post</a>
+
+							</div>
+						</div>
+					</div>
+					<div class="blog__item">
+						<div class="item__photo">
+							<img src="../../static/images/blog/kangaroo.png" alt="dog">
+						</div>
+						<div class="item__column">
+							<div class="item__tags">
+								<div class="tag__wrapper">
+									<img src="../../static/images/icons/tag__orange.svg" alt="">
+								</div>
+								<div class="tag__wrapper">
+									<img src="../../static/images/icons/tag__orange.svg" alt="">
+								</div>
+							</div>
+							<div class="item__properties">
+								<span class="property__data">17.01.2020</span>
+								<span class="property__views">337 views</span>
+								<span class="property__comments">48 comments</span>
+							</div>
+							<div class="item__text">
+								<p class="item__title text__blog_title">Kangaroo. Start.</p>
+								<p class="item__subtitle">At leo at nisl tortor egestas. Mauris luctus est luctus massa tellus
+									erat gravida. Eget aenean eget diam habitant risus. Dapibus et, nec platea felis. Facilisi ut
+									leo arcu, semper id pellentesque quisque ultrices etiam.
+								</p>
+								<a href="#" class="item__link text__general_bold">Go to this post</a>
+
+							</div>
+						</div>
+					</div>
+					<div class="blog__item">
+						<div class="item__photo">
+							<img src="../../static/images/blog/duckling.png" alt="dog">
+						</div>
+						<div class="item__column">
+							<div class="item__tags">
+								<div class="tag__wrapper">
+									<img src="../../static/images/icons/tag__orange.svg" alt="">
+								</div>
+								<div class="tag__wrapper">
+									<img src="../../static/images/icons/tag__orange.svg" alt="">
+								</div>
+							</div>
+							<div class="item__properties">
+								<span class="property__data">15.01.2020</span>
+								<span class="property__views">222 views</span>
+								<span class="property__comments">14 comments</span>
+							</div>
+							<div class="item__text">
+								<p class="item__title text__blog_title">Met a duckling at the pond.</p>
+								<p class="item__subtitle">Nulla tempus mauris sed vel bibendum. Felis urna suspendisse amet,
+									laoreet sagittis. Semper pellentesque condimentum vitae morbi in dui. Et in et diam massa.
+								</p>
+								<a href="#" class="item__link text__general_bold">Go to this post</a>
+
+							</div>
+						</div>
+					</div>
+					<div class="blog__item">
+						<div class="item__photo">
+							<img src="../../static/images/blog/dogs.png" alt="dog">
+						</div>
+						<div class="item__column">
+							<div class="item__tags">
+								<div class="tag__wrapper">
+									<img src="../../static/images/icons/tag__orange.svg" alt="">
+								</div>
+								<div class="tag__wrapper">
+									<img src="../../static/images/icons/tag__orange.svg" alt="">
+								</div>
+							</div>
+							<div class="item__properties">
+								<span class="property__data">20.01.2020</span>
+								<span class="property__views">122 views</span>
+								<span class="property__comments">23 comments</span>
+							</div>
+							<div class="item__text">
+								<p class="item__title text__blog_title">Can dogs also be friends?</p>
+								<p class="item__subtitle">Eu, libero aliquet nibh turpis quis nulla et ullamcorper purus.
+									Consequat egestas sed sagittis morbi lacus. Consectetur et justo, sagittis vitae mi faucibus
+									urna, eu.
+								</p>
+								<a href="#" class="item__link text__general_bold">Go to this post</a>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="blog__slider">
+					<button class="blog__arrow blog__arrow_left"><img src="../../static/images/icons/arrow_left.svg"
+							alt=""></button>
+					<div class="blog__numbers">
+						<span class="blog__number text__general_grey">1</span>
+						<span class="blog__number text__general_grey">2</span>
+						<span class="blog__number text__general_grey">3</span>
+						<span class="blog__number text__general_grey">4</span>
+						<span class="blog__number text__general_grey">5</span>
+						<span class="blog__number text__general_grey">6</span>
+						<span class="blog__number text__general_grey">7</span>
+						<span class="blog__number text__general_grey">8</span>
+					</div>
+					<button class="blog__arrow blog__arrow_right"><img src="../../static/images/icons/arrow_right.svg"
+							alt=""></button>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	@@include('./footer/index.html')
+
+	<script src="./scripts.js"></script>
+</body>
+
+</html>

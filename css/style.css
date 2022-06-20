@@ -1,0 +1,247 @@
+.main__top {
+  margin-bottom: 60px;
+}
+
+.main__hero {
+  max-width: 280px;
+  font-weight: 700;
+  font-size: 47px;
+  line-height: 57px;
+}
+
+.main__personal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 36px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.main__description {
+  max-width: 226px;
+  margin-bottom: 7px;
+}
+
+.main__photo {
+  margin-bottom: 30px;
+}
+
+.main__designations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main__point {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main__point img {
+  max-width: 10px;
+  max-height: 10px;
+  margin: 0 7px;
+}
+
+.main__portfolio {
+  background: #F6F6F6;
+}
+
+.main__skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 16px;
+}
+
+.main__about {
+  background: #F6F6F6;
+}
+
+.about__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 60px;
+}
+
+.about__title {
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+.about__message {
+  max-width: 448px;
+  margin-bottom: 70px;
+  border: 2.5px solid #070707;
+  padding: 15px;
+  position: relative;
+}
+
+.about__message::after {
+  content: '';
+  position: absolute;
+  right: 27px;
+  bottom: -30px;
+  border: 15px solid transparent;
+  border-top: 15px solid #f6f6f6;
+  z-index: 10;
+}
+
+.skills__title {
+  margin-bottom: 20px;
+}
+
+.skills__qualities {
+  margin-bottom: 50px;
+}
+
+.skills__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 -13px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.skill__item {
+  padding: 0 13px;
+  margin-bottom: 44px;
+}
+
+.item__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.item__picture {
+  max-width: 90px;
+  margin-bottom: 20px;
+}
+
+.item__title {
+  margin-bottom: 25px;
+}
+
+.item__progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -6px;
+}
+
+.item__percent, .item__scale {
+  padding: 0 6px;
+}
+
+.item__scale {
+  margin-top: 3px;
+}
+
+.portfolio__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.portfolio__title {
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+.portfolio__site {
+  position: relative;
+}
+
+.portfolio__slider {
+  margin-bottom: 60px;
+}
+
+.portfolio__arrow_left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.portfolio__arrow_right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.portfolio__basement {
+  max-height: 150px;
+  padding: 31px 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(7, 7, 7, 0.85);
+}
+
+.portfolio__hero {
+  margin-bottom: 16px;
+  border-bottom: 1px dashed #fff;
+}
+
+.portfolio__description {
+  max-width: 400px;
+}

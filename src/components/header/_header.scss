@@ -1,0 +1,22 @@
+
+.header__row{	
+	margin: 33px 0;
+	padding-bottom: 33px;
+	justify-content: space-between;
+	display: flex;
+	border-bottom: 1px solid #828282;
+	&:first-child{
+		flex: 1 1 auto;
+	}
+}
+
+.header__list{
+	display: flex;
+	margin-right: -5px;
+	li{
+		padding: 0 5px;
+		:last-child{
+			padding-right: 0px;
+		}
+	}
+}

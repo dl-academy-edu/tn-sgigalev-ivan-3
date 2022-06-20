@@ -1,0 +1,47 @@
+
+body {
+  width: 100%;
+  font-family: 'Gilroy';
+}
+.container{
+	max-width: 1030px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+img{
+	width: 100%;
+	object-fit: cover;
+}
+
+.section__title{
+	font-weight: 700;
+	font-size: 34px;
+	line-height: 41px;
+}
+
+.text__general{
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21px;
+	&_wht{
+		color: #FFFFFF;
+	}
+	&_bold{
+		font-weight: 700;
+	}
+	&_grey{
+		color: #E5E5E5;
+	}
+}
+
+.text__ltl{
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	text-align: center;
+}
+
+
+@import "./nullstyle";
+@import "./footer/footer";
+@import "./header/header";

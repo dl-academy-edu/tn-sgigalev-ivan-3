@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Grid</title>
+	<link rel="stylesheet" href="../../common.css">
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="../../static/fonts/fonts.css">
+	<meta name="description"
+		content="Учебный проект Жигалева Ивана. Страница, где я поработал с Grid. Классная штука, очень даже удобная и не особо и сложная">
+	<meta name="keywords" content="Подпишись на мой youtube канал Бирлогич">
+</head>
+
+<body>
+	@@include('./header/index.html')
+
+	<main class=" main">
+		<div class="main__top container">
+			<h1 class="main__title title title__other"> Grid </h1>
+			<ul class="main__nav_page">
+				<li>
+					<a href="/" class="page__link">Home</a>
+				</li>
+				<li>
+					<a href="#" class="page__link">Grid</a>
+				</li>
+			</ul>
+		</div>
+		<div class="main__grid">
+			<div class="main__item_1">
+				<div class="main__text">
+					<p class="main__topic">IPHONE 6S</p>
+					<p class="main__title">3D Touch. 12MP photos. 4K video. One powerful phone</p>
+					<p class="main__words">Learn more or visit an Apple Store today</p>
+				</div>
+				<div class="main__pic_iphone"><img src="../../static/images/grid/iphone.png" alt="iphone"></div>
+			</div>
+			<div class="main__item_2">
+				<p class="main__topic">LEARN MORE</p>
+				<p class="main__head">How to Use Rotary Evaporator in Chemical Labs</p>
+				<a href="#" class="grid__link grid__link_undetline">Download now</a>
+			</div>
+			<div class="main__item_3">
+				<div class="main__pic_keyboard"><img src="../../static/images/grid/keyboard.png" alt="keyboard">
+				</div>
+				<p class="main__title main__title_wht">Our Brand New Keyboard</p>
+				<a href="#" class="grid__link grid__link_yellow ">LEARN ›</a>
+			</div>
+			<div class="main__item_4">
+				<div class="main__row">
+					<div class="main__column">
+						<p class="main__topic">IMAC.RETINA</p>
+						<p class="main__title">Hardly a month passes these days where</p>
+						<img src="../../static/images/grid/imac.png" alt="imac" class="main__picture_imac">
+					</div>
+					<div class="main__column">
+						<p class="main__words">Apple may be experimenting in the virtual reality space. The company has
+							been granted a patent for a head-mounted virtual reality device that would use the iPhone screen
+							as the display.</p>
+						<a href="#" class="grid__link">DOWNLOAD NOW ›</a>
+					</div>
+				</div>
+			</div>
+			<div class="main__item_5">
+				<div class="main__pic_diskette"><img src="../../static/images/grid/diskette.png" alt="diskette"></div>
+				<p class="main__title_wht">iCloud</p>
+				<p class="main__words main__words_wht ">With iCloud, you always have the latest versions of your most
+					important things — like documents, apps,
+					notes, and contacts — on whatever device you’re using.</p>
+				<a href="#" class="grid__link grid__link_oval">LEARN MORE</a>
+			</div>
+			<div class="main__item_6">
+				<p class="main__title main__title_ltl">BEST CHOICE</p>
+				<div class="main__column">
+					<p class="main__title main__title_wht">Much MuchBetter Experience</p>
+					<div class="main__pic_laptop"><img src="../../static/images/grid/laptop.png" alt=""></div>
+				</div>
+			</div>
+			<div class="main__item_7">
+				<div class="main__pic_gamepad"><img src="../../static/images/grid/gamepad.png" alt=""></div>
+				<p class="main__title">Games ourpasion</p>
+				<a href="#" class="grid__link">LEARN ›</a>
+			</div>
+			<div class="main__item_8">
+				<div class="main__pic_insta"><img src="../../static/images/grid/insta.png" alt="insta"></div>
+				<a href="#" class="grid__link grid__link_bb">Follow me ›</a>
+			</div>
+			<div class="main__item_9">
+				<div class="main__pic_tv"><img src="../../static/images/grid/tv.png" alt="TV"></div>
+				<p class="main__title main__title_wht">More than just a display, it’s a vision</p>
+			</div>
+		</div>
+	</main>
+
+	@@include('./footer/index.html')
+</body>
+
+</html>
