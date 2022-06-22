@@ -41,7 +41,21 @@ img{
 	text-align: center;
 }
 
+.btn{
+	display: inline-block;
+	p{
+		padding: 7px 12px;
+		border: 2px solid black;
+		border-radius: 15px;
+	}
+}
+
+input{
+	border: 2.5px solid #E5E5E5;
+	height: 50px;
+}
 
 @import "./nullstyle";
 @import "./footer/footer";
 @import "./header/header";
+@import "./popup__sign/popup__sign";

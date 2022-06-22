@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sign</title>
+	<link rel="stylesheet" href="../../common.css">
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="../../static/fonts/fonts.css">
+	<meta name="description" content="Портфолио Жигалева Ивана. Страничка регистрации/входа">
+	<meta name="keywords" content="Подпишись на мой youtube канал Бирлогич">
+</head>
+
+<body>
+
+	@@include('./header/index.html')
+
+	<main class="main">
+		<div class="container">
+			<section class="main__profile">
+				<h1 class="main__title section__title">My profile</h1>
+				<div class="main__row">
+					<div class="main__canvas">
+						<img src="../../static/images/profile/canvas.svg" alt="photo__is__absent">
+					</div>
+					<div class="main__info">
+						<div class="main__column">
+							<ul class="main__personal">
+								<li class="main__text">Name:</li>
+								<li class="main__text">Surname:</li>
+								<li class="main__text">Email:</li>
+								<li class="main__text">Password:</li>
+								<li class="main__text">Location:</li>
+								<li class="main__text">Age:</li>
+							</ul>
+							<div class="main__buttons">
+								<button class="main__button btn">
+									<p>Change password</p>
+								</button>
+								<button class="main__button btn">
+									<p>Change other data</p>
+								</button>
+								<button class="main__button btn">
+									<p>Delete account</p>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+
+	@@include('./footer/index.html')
+
+	<script src="./scripts.js"></script>
+</body>
+
+</html>
