@@ -29,7 +29,7 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		margin: 0 -10px;
-		max-width: 300px;
+		max-width: 320px;
 	}
 	&__item{
 		padding: 0 10px;
@@ -53,4 +53,13 @@
 			border-bottom: 1px dashed #000;
 		}
 	}
+}
+
+@media ( max-width:320px) {
+	.footer__item {
+		padding: 0px 14px;
+  }
+  .footer__networks {
+	margin-bottom: 30px;
+}
 }

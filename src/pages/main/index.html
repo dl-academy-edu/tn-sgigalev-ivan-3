@@ -23,6 +23,10 @@
 				<h1 class="main__hero">IVAN ZHIGALEV</h1>
 				<p class="main__description text__general">Future front-end developer
 					31 years old, Tolyatti</p>
+				<div class="burger__link">
+					<button type="button" class="burger__button"><img src="../../static/images/icons/burger__menu.png"
+							alt="burger__menu"></button>
+				</div>
 			</div>
 			<div class="main__slider">
 				<div class="main__photo">
@@ -146,7 +150,12 @@
 				<h2 class="portfolio__title section__title">Portfolio</h2>
 				<div class="portfolio__slider">
 					<div class="portfolio__site">
-						<img src="../../static/images/main/site.png" alt="">
+						<picture class="main__picture">
+							<source srcset="../../static/images/main/site__mobile.png" media="(max-width: 320px)">
+							<source srcset="../../static/images/main/site__tablet.png" media="(max-width: 769px)">
+							<source srcset="../../static/images/main/site.png">
+							<img src="../../static/images/main/woman.jpg" alt="woman">
+						</picture>
 						<div class="potrfolio__arrows">
 							<button type="button" class="portfolio__arrow portfolio__arrow_left">
 								<img src="../../static/images/icons/arrow__portfolio_left.svg" alt="">
@@ -169,7 +178,6 @@
 	</main>
 
 	@@include('./footer/index.html')
-
 	<script src="./scripts.js"></script>
 </body>
 

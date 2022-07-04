@@ -1,17 +1,14 @@
-
-.popup__sign{
+.popup__message{
 	position: fixed;
    top: 0;
 	left: 0;
    width: 100%;
    height: 100vh;
 	background: rgba(246, 246, 246, 0.99);
-   opacity: 0; 
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	z-index: 5;
-	opacity: 0;
 	visibility: hidden;
 	&_open{
 		opacity: 1;
@@ -19,21 +16,40 @@
 	}
 }
 
-.popup__sign_body{
+.popup__message_body{
 	position: relative;
-	width: 370px;
+	max-width: 680px;
 	padding: 40px;
 	background: #FFFFFF;
 	border: 2.5px solid #070707;
 }
 
-.popup__item_email,
-.popup__item_password{
+.popup__information{
+	display: flex;
+	margin: 0 -10px;
+	flex-wrap: wrap;
 	margin-bottom: 20px;
 }
-.popup__close{
+
+.popup__item{
+	flex: 1 1 50%;
+	padding: 0 10px;
+	margin-bottom: 20px;
+}
+
+.popup__discuss{
+	margin-bottom: 20px;
+	label{
+	max-width: 487px;
+}
+}
+
+.popup__close_mes{
 	position: absolute;
 	top: -1px;
 	right: -33px;
 }
 
+textarea{
+	height: 200px;
+}

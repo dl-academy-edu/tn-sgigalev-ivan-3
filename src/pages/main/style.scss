@@ -96,8 +96,9 @@
 	}
 }
 .skill__item{
-	padding: 0 13px;
+	padding: 0 0 0 13px;
 	margin-bottom: 44px;
+	max-width: 180px;
 }
 .item{
 	&__column{
@@ -176,10 +177,46 @@
 	}
 }
 
+.burger__link{
+	display: none;
+}
 
+@media (max-width: 768px) { 
+	.container{
+		max-width: 648px;
+	}
+	.skill__item{
+		max-width: 147px;
+	}
+}
 
-
-
+@media (max-width: 320px) { 
+	.burger__link{
+		display: block;
+		margin-bottom: 17px;
+	}
+	.burger__button{
+		width: 32px;
+	}
+	.skills__row{
+		margin: 0;
+	}
+	.skill__item {
+		max-width: 130px;
+  }
+  .main__personal {
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+  .main__hero{
+	margin-bottom: 20px;
+  }
+  .portfolio__basement{
+	padding: 20px 15px;
+   text-align: center;
+	max-height: 181px;
+  }
+}
 
 
 

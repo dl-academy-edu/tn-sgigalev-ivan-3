@@ -12,7 +12,9 @@ img{
 	width: 100%;
 	object-fit: cover;
 }
-
+a{
+	color: #828282;
+}
 .section__title{
 	font-weight: 700;
 	font-size: 34px;
@@ -39,23 +41,38 @@ img{
 	font-size: 14px;
 	line-height: 16px;
 	text-align: center;
+	&_notselected{
+		color: #E5E5E5;
+	}
 }
 
 .btn{
+	color: #E5E5E5;
 	display: inline-block;
 	p{
 		padding: 7px 12px;
-		border: 2px solid black;
+		border: 2px solid #E5E5E5;
 		border-radius: 15px;
 	}
 }
 
-input{
+//Popup
+label{
+	margin-bottom: 6px;
+}
+
+input[type="textarea"],
+input[type="text"],
+input[type="email"],
+input[type="password"] {
 	border: 2.5px solid #E5E5E5;
 	height: 50px;
+	width: 100%;
 }
 
 @import "./nullstyle";
 @import "./footer/footer";
 @import "./header/header";
 @import "./popup__sign/popup__sign";
+@import "./popup__register/popup__register";
+@import "./popup__message/popup__message";
