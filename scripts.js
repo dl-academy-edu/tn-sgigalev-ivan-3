@@ -154,34 +154,175 @@ formSign.addEventListener("submit", (event) => {
 
 const formRegister = document.forms[1];
 
-let mailCheck = /^[0-9a-z-\.]+\@[0-9a-z-]{2,}\.[a-z]{2,}$/;
-let phoneCheck = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
-
-
 formRegister.addEventListener("submit", (event) => {
 	event.preventDefault();
 
 	const agreement = formRegister.querySelector(`[name ="agreement"]`)
+	const textsRegister = formRegister.querySelector(`[type='text']`)
+	const passwordRegister = formRegister.querySelector(`[type='password']`)
+	const emailRegister = formRegister.querySelector(`[type='email']`)
+	const numberRegister = formRegister.querySelector(`[type='number']`)
 
-	if (!agreement.checked) {
-		alert('Agree with me!')
-		return
+	function isEmail(email) {
+		return email.match(/^[0-9a-z-\.]+\@[0-9a-z-]{2,}\.[a-z]{2,}$/i);
 	}
 
-	const textsRegister = formRegister.querySelectorAll(`[type='text']`)
-	const isTextCorrect = mailCheck.test(textsRegister.value);
-	console.log(isTextCorrect);
+	function isPhone(phone) {
+		return phone.match(/^[0-9a-z-\.]+\@[0-9a-z-]{2,}\.[a-z]{2,}$/i);
+	}
+
+	function setError(inputRegister, errorMessage) {
+		const error = errorCreator(errorMessage);
+		inputRegister.classList.add('is-invalid');
+		inputRegister.insertAdjacentElement('afterend', error);
+	}
+
+	function errorCreator(message) {
+		let messageError = document.createElement('div');
+		messageError.classList.add('invalid-feedback');
+		messageError.innerText = message;
+		return messageError;
+	}
+
+	let error = {};
+
+	if (!agreement.checked) {
+		error.agreement = ' Пожалуйста, подтвердите соглашение!'
+	}
+
+	if (!isEmail(emailRegister.value)) {
+		error.emailRegister = 'Please enter a valid email address (your entry is not in the format "somebody@example.com")'
+	}
+
+	if (passwordRegister.value.length < 6) {
+		error.passwordRegister = 'Пароль слишком короткий!'
+	}
+
+	if (Object.keys(error).length) {
+		console.log(error);
+		Object.keys(error).forEach(key => {
+			const messageError = error[key];
+			const input = formRegister.elements[key];
+			setError(input, messageError);
+		})
+		console.log(errorCreator(error.emailRegister));
+		return;
+	}
 
 	const inputRegister = formRegister.querySelectorAll('input');
-
 	const dataForServer = {};
-
 	for (input of inputRegister) {
 		dataForServer[input.name] = input.checked
 			? input.checked
 			: input.value;
 	}
 
-
 	console.log(dataForServer);
+});
+
+
+//Slider
+
+const sliderWrapper = document.querySelector('.slider__wrapper');
+const innerSliderWrapper = document.querySelector('.slider__inner-wrapper');
+const slides = document.querySelectorAll('.slider__slide');
+const pagination = document.querySelector('.slider__pagination');
+
+const buttonPrev = document.querySelector('.arrow_prev');
+const buttonNext = document.querySelector('.arrow_next');
+const slidesAmount = innerSliderWrapper.childElementCount;
+
+let activeSlide = 1;
+
+const slideWidth = +getComputedStyle(sliderWrapper).width.split('px')[0];
+
+const addWidthToSlides = () => {
+	for (slide of slides) {
+		slide.style.width = `${slideWidth}px`
+	}
+}
+
+const changeActiveSlide = (direction) => {
+	innerSliderWrapper.style.transition = 'all 0.5s';
+	const currentML = +innerSliderWrapper.style.marginLeft.split('px')[0];
+	console.log(currentML)
+
+	switch (direction) {
+		case 'next':
+			if (activeSlide < slidesAmount) {
+				innerSliderWrapper.style.marginLeft = `${currentML - slideWidth}px`;
+				activeSlide++;
+				buttonPrev.removeAttribute('disabled');
+			}
+
+			if (activeSlide === slidesAmount) {
+				buttonNext.setAttribute('disabled', true);
+				return
+			}
+			break;
+
+		case 'prev':
+			if (activeSlide !== 1) {
+				innerSliderWrapper.style.marginLeft = `${currentML + slideWidth}px`;
+				activeSlide--;
+				buttonNext.removeAttribute('disabled');
+			}
+
+			if (activeSlide === 1) {
+				buttonPrev.setAttribute('disabled', true);
+			}
+
+			break;
+
+		default:
+	}
+}
+
+const changeActiveDot = (index) => {
+	const activeDot = document.querySelector('.slider__dot_active');
+	activeDot.classList.remove('slider__dot_active');
+	pagination.children[index].classList.add('slider__dot_active');
+}
+
+for (let i = 1; i <= slidesAmount; i++) {
+	const dot = document.createElement('button');
+	dot.classList.add(`index - ${i}`);
+
+	if (i === activeSlide) {
+		dot.classList.add('slider__dot', 'slider__dot_active')
+	}
+
+	dot.classList.add('slider__dot')
+	const currentSlideIndex = i - 1;
+	dot.addEventListener('click', () => {
+		innerSliderWrapper.style.marginLeft = `- ${currentSlideIndex * slideWidth}px`
+		changeActiveDot(currentSlideIndex);
+	})
+
+	pagination.insertAdjacentElement('beforeend', dot)
+}
+
+addWidthToSlides()
+
+buttonNext.addEventListener('click', () => {
+	changeActiveSlide('next');
+}
+)
+
+buttonPrev.addEventListener('click', () => {
+	changeActiveSlide('prev');
+}
+)
+
+const swiper = new Swiper('.swiper', {
+	// Navigation arrows
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+
+	pagination: {
+		el: '.swiper-pagination',
+		type: 'fraction',
+	},
 });

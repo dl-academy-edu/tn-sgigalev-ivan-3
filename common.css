@@ -432,3 +432,7 @@ button::-moz-focus-inner{
 .popup__area:focus{
 	border:2.5px solid #070707
 }
+
+button:disabled{
+	border: 0;
+}

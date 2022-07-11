@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="./common.css">
 	<link rel="stylesheet" href="./style.css">
 	<link rel="stylesheet" href="./static/fonts/fonts.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 	<meta name="description" content="Портфолио Жигалева Ивана. Начальная страница">
 	<meta name="keywords" content="Подпишись на мой youtube канал Бирлогич">
 </head>
@@ -69,7 +70,7 @@
 					</label>
 					<input name="password" type="password" name="password" id="password">
 				</div>
-				<button class="popup__button btn">
+				<button type="submit" class="popup__button btn submit_btn">
 					Log in
 				</button>
 				<button class="popup__close">
@@ -105,13 +106,13 @@
 						<label for="password" class="item__label">
 							<p>Password *</p>
 						</label>
-						<input type="text" name="password" id="password">
+						<input type="password" name="password" id="password">
 					</li>
 					<li class="popup__item popup__item_repeat">
 						<label for="repeat" class="item__label">
 							<p>Repeat password *</p>
 						</label>
-						<input type="text" name="repeat" id="repeat">
+						<input type="password" name="repeat" id="repeat">
 					</li>
 					<li class="popup__item popup__item_location">
 						<label for="location" class="item__label">
@@ -133,7 +134,7 @@
 						your
 						personal data.</label>
 				</div>
-				<button class="popup__button btn">
+				<button type="submit" class="popup__button btn submit_btn">
 					Sign up
 				</button>
 				<button class="popup__close_reg">
@@ -156,21 +157,45 @@
 				</div>
 			</div>
 			<div class="main__slider">
-				<div class="main__photo">
-					<img src="./static/images/main/phoho.jpg" class="main__portrait" alt="main_photo">
+				<div class="slider__wrapper">
+					<div class="slider__inner-wrapper">
+						<div class="slider__slide"><img src="./static/images/main/photo.jpg" class="main__portrait"
+								alt="main_photo">
+						</div>
+						<div class="slider__slide"><img src="./static/images/main/photo1.jpg" class="main__portrait"
+								alt="main_photo">
+						</div>
+						<div class="slider__slide"><img src="./static/images/main/photo2.jpg" class="main__portrait"
+								alt="main_photo">
+						</div>
+						<div class="slider__slide"><img src="./static/images/main/photo3.jpg" class="main__portrait"
+								alt="main_photo">
+						</div>
+					</div>
 				</div>
 				<div class="main__designations">
-					<button type="button" class="main__arrow arrow_left">
-						<img src="./static/images/icons/arrow_left.svg" alt="arrow_left">
+					<button type="button" class="main__arrow arrow_prev">
+						<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="40.75" y="40.75" width="39.5" height="39.5" rx="19.75"
+								transform="rotate(-180 40.75 40.75)" stroke="#070707" stroke-width="2.5" />
+							<rect x="24.5791" y="32.6992" width="16.5512" height="3" rx="1.5"
+								transform="rotate(-135 24.5791 32.6992)" fill="#070707" />
+							<rect x="26.7002" y="11.4199" width="16.5512" height="3" rx="1.5"
+								transform="rotate(135 26.7002 11.4199)" fill="#070707" />
+						</svg>
+
 					</button>
-					<div class="main__point">
-						<button type="button"> <img src="./static/images/icons/point.svg" alt=""></button>
-						<button type="button"> <img src="./static/images/icons/point.svg" alt=""></button>
-						<button type="button"> <img src="./static/images/icons/point.svg" alt=""></button>
-						<button type="button"> <img src="./static/images/icons/point.svg" alt=""></button>
-					</div>
-					<button type="button" class="main__arrow arrow_right">
-						<img src="./static/images/icons/arrow_right.svg" alt="arrow_right">
+					<div class="slider__pagination"></div>
+					<button type="button" class="main__arrow arrow_next">
+						<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="1.25" y="1.25006" width="39.5" height="39.5" rx="19.75" stroke="#070707"
+								stroke-width="2.5" />
+							<rect x="17.4209" y="9.30084" width="16.5512" height="3" rx="1.5"
+								transform="rotate(45 17.4209 9.30084)" fill="#070707" />
+							<rect x="15.2998" y="30.5801" width="16.5512" height="3" rx="1.5"
+								transform="rotate(-45 15.2998 30.5801)" fill="#070707" />
+						</svg>
+
 					</button>
 				</div>
 			</div>
@@ -275,7 +300,25 @@
 		<section class="main__portfolio">
 			<div class="portfolio__wrapper">
 				<h2 class="portfolio__title section__title">Portfolio</h2>
-				<div class="portfolio__slider">
+				<div class="swiper container">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide"><img src="./static/images/main/site.png" alt=""></div>
+						<div class="swiper-slide"><img src="./static/images/main/photo1.jpg" alt=""></div>
+						<div class="swiper-slide"><img src="./static/images/main/photo.jpg" alt=""></div>
+						<div class="swiper-slide"><img src="./static/images/main/photo3.jpg" alt=""></div>
+						...
+					</div>
+					<!-- If we need pagination -->
+					<div class="swiper-pagination"></div>
+
+					<!-- If we need navigation buttons -->
+					<div class="swiper__button swiper-button-prev"></div>
+					<div class="swiper__button swiper-button-next"></div>
+
+				</div>
+				<!-- 				<div class="portfolio__slider">
 					<div class="portfolio__site">
 						<picture class="main__picture">
 							<source srcset="./static/images/main/site__mobile.png" media="(max-width: 320px)">
@@ -299,7 +342,7 @@
 								interactivity via JavaScript.</p>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</section>
 	</main>
@@ -372,7 +415,7 @@
 					</label>
 					<input type="textarea" class="popup__area" name="discuss" id="discuss">
 				</div>
-				<button class="popup__button btn btn__not" disabled>
+				<button type="submit" class="popup__button btn submit_btn">
 					Sign up
 				</button>
 				<button class="popup__close_mes">
@@ -382,6 +425,7 @@
 
 		</div>
 	</div>
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 	<script src="./scripts.js"></script>
 </body>
 
