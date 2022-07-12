@@ -256,3 +256,8 @@
 .invalid-feedback{
 	color: red;
 }
+
+.arrow_prev:disabled::after{
+	content: '';
+	fill: black;
+}
