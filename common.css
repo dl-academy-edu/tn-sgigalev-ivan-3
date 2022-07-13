@@ -41,20 +41,30 @@ a{
 	line-height:16px;
 	text-align:center
 }
+
 .btn{
+	font-weight: 700;
 	color:#000;
 	display:inline-block;
 	padding:7px 12px;
 	border:2px solid #000;
 	border-radius:18px
 }
+
+.btn:hover{
+	color: white;
+	background: black;
+}
+
 .popup__link{
 	color:#828282
 }
+
 label{
 	margin-bottom:6px;
 	cursor:pointer
 }
+
 input[type=email],input[type=number],input[type=password],input[type=text]{
 	border:2.5px solid #e5e5e5;
 	height:50px;
@@ -193,8 +203,14 @@ button::-moz-focus-inner{
 	font-size:18px;
 	line-height:22px;
 	text-align:center;
-	color:#070707
+	color:#070707;
 }
+
+.footer__social p:hover{
+	color:white;
+	background: black;
+}
+
 @media (max-width:320px){
 	.footer__item{
 	padding:0 14px

@@ -30,7 +30,6 @@
 }
 
 .slider__slide{
-/* 	width: 1000px; */
 	flex-shrink: 0;
 }
 
@@ -257,7 +256,3 @@
 	color: red;
 }
 
-.arrow_prev:disabled::after{
-	content: '';
-	fill: black;
-}
