@@ -147,97 +147,104 @@
 
 	<main class="main">
 		<div class="container">
-			<h1 class="blog__title section__title">My blog</h1>
+			<div class="main__title">
+				<h1 class="blog__title section__title">My channel</h1>
+				<div class="burger__link">
+					<button type="button" class="burger__button"><img src="../../static/images/icons/burger__menu.png"
+							alt="burger__menu"></button>
+				</div>
+			</div>
+
 			<div class="main__inputs">
 				<form class="inputs">
 					<div class="input__forms">
 						<div class="input__tags">
 							<p class="input__title">Tags</p>
 							<div class="input__check">
-								<input type="checkbox" id="checkbox_1" class="input__checkbox checkbox_1"><label
-									for="checkbox_1"></label>
-								<input type="checkbox" id="checkbox_2" class="input__checkbox checkbox_2"><label
+								<input type="checkbox" id="checkbox_1" class="input__checkbox checkbox_1"
+									value="light blue"><label for="checkbox_1"></label>
+								<input type="checkbox" id="checkbox_2" class="input__checkbox checkbox_2" value="blue"><label
 									for="checkbox_2"></label>
-								<input type="checkbox" id="checkbox_3" class="input__checkbox checkbox_3"><label
+								<input type="checkbox" id="checkbox_3" class="input__checkbox checkbox_3" value="yellow"><label
 									for="checkbox_3"></label>
-								<input type="checkbox" id="checkbox_4" class="input__checkbox checkbox_4"><label
-									for="checkbox_4"></label>
-								<input type="checkbox" id="checkbox_5" class="input__checkbox checkbox_5"><label
+								<input type="checkbox" id="checkbox_4" class="input__checkbox checkbox_4"
+									value="turquoise"><label for="checkbox_4"></label>
+								<input type="checkbox" id="checkbox_5" class="input__checkbox checkbox_5" value="orange"><label
 									for="checkbox_5"></label>
-								<input type="checkbox" id="checkbox_6" class="input__checkbox checkbox_6"><label
+								<input type="checkbox" id="checkbox_6" class="input__checkbox checkbox_6" value="pink"><label
 									for="checkbox_6"></label>
-								<input type="checkbox" id="checkbox_7" class="input__checkbox checkbox_7"><label
-									for="checkbox_7"></label>
-								<input type="checkbox" id="checkbox_8" class="input__checkbox checkbox_8"><label
+								<input type="checkbox" id="checkbox_7" class="input__checkbox checkbox_7"
+									value="dark blue"><label for="checkbox_7"></label>
+								<input type="checkbox" id="checkbox_8" class="input__checkbox checkbox_8" value="green"><label
 									for="checkbox_8"></label>
 							</div>
 						</div>
 						<div class="input__views">
 							<p class="input__title">Views</p>
 							<div class="input__radio">
-								<input type="radio" id="viewChoice" class="input__view" name="view">
+								<input type="radio" id="viewChoice" class="input__view" name="view" value="100-500">
 								<label for="viewChoice" class="text__general">100-500</label>
 							</div>
 							<div class="input__radio">
-								<input type="radio" id="viewChoice1" class="input__view" name="view">
-								<label for="viewChoice1" class="text__general">500-100</label>
+								<input type="radio" id="viewChoice1" class="input__view" name="view" value="500-1000">
+								<label for="viewChoice1" class="text__general">500-1000</label>
 							</div>
 							<div class="input__radio">
-								<input type="radio" id="viewChoice2" class="input__view" name="view">
+								<input type="radio" id="viewChoice2" class="input__view" name="view" value="1000-2000">
 								<label for="viewChoice2" class="text__general">1000-2000</label>
 							</div>
 						</div>
 						<div class="input__comments">
 							<p class="input__title">Comments</p>
 							<div class="input__comment">
-								<input type="checkbox" id="comentChoice" class="comments">
+								<input type="checkbox" id="comentChoice" class="comments" value="0">
 								<label for="comentChoice" class="text__general">0</label>
 							</div>
 							<div class="input__comment">
-								<input type="checkbox" id="comentChoice1" class="comments">
+								<input type="checkbox" id="comentChoice1" class="comments" value="0-1">
 								<label for="comentChoice1" class="text__general">0-1</label>
 							</div>
 							<div class="input__comment">
-								<input type="checkbox" id="comentChoice2" class="comments">
+								<input type="checkbox" id="comentChoice2" class="comments" value="1-50">
 								<label for="comentChoice2" class="text__general">1-50</label>
 							</div>
 						</div>
 						<div class="input__shows">
 							<p class="input__title">How show?</p>
 							<div class="show">
-								<input type="radio" id="showChoice" class="input__show" name="show">
+								<input type="radio" id="showChoice" class="input__show" name="show" value="5">
 								<label for="showChoice" class="text__general">show 5</label>
 							</div>
 							<div class="show">
-								<input type="radio" id="showChoice1" class="input__show" name="show">
+								<input type="radio" id="showChoice1" class="input__show" name="show" value="10">
 								<label for="showChoice1" class="text__general">show 10</label>
 							</div>
 						</div>
 						<div class="input__sorts">
 							<p class="input__title">Sort by</p>
 							<div class="sort">
-								<input type="radio" id="sortChoice" class="input__sort" name="sort">
+								<input type="radio" id="sortChoice" class="input__sort" name="sort" value="date">
 								<label for="sortChoice" class="text__general">date</label>
 							</div>
 							<div class="sort">
-								<input type="radio" id="sortChoice1" class="input__sort" name="sort">
+								<input type="radio" id="sortChoice1" class="input__sort" name="sort" value="title">
 								<label for="sortChoice1" class="text__general">title</label>
 							</div>
 							<div class="sort">
-								<input type="radio" id="sortChoice2" class="input__sort" name="sort">
+								<input type="radio" id="sortChoice2" class="input__sort" name="sort" value="views">
 								<label for="sortChoice2" class="text__general">views</label>
 							</div>
 						</div>
 						<div class="input__reset">
 							<p class="reset__title text__general_ltl">reset form</p>
-							<button type="submit" class="input__button btn">
+							<button type="reset" class=" btn input__button">
 								Reset
 							</button>
 						</div>
 					</div>
 					<div class="input__text">
 						<input type="text" id="input__text" name="text">
-						<label for="input__text" class="text__general"><button type="submit" class="input__button btn">
+						<label for="input__text" class="text__general"><button type="submit" class=" btn input__button">
 								Search
 							</button></label>
 					</div>
@@ -247,7 +254,7 @@
 				<div class="blog__column">
 					<div class="blog__item">
 						<div class="item__photo">
-							<img src="../../static/images/blog/dog.png" alt="dog" class="blog__photo">
+							<img src="../../static/images/blog/lastofus.jpg" alt="lastofus" class="channel__photo">
 						</div>
 						<div class="item__column">
 							<div class="item__tags">
@@ -259,23 +266,59 @@
 								</div>
 							</div>
 							<div class="item__properties">
-								<span class="property__data">20.01.2020</span>
-								<span class="property__views">223 views</span>
-								<span class="property__comments">97 comments</span>
+								<span class="property__data">25.10.2020</span>
+								<span class="property__views">691 views</span>
+								<span class="property__comments">107 comments</span>
 							</div>
 							<div class="item__text">
-								<p class="item__title text__blog_title text__blog_title">This is my new dog.</p>
-								<p class="item__subtitle">Duis sit odio dui pretium suspendisse malesuada sit leo in. Massa nec
-									eget etiam tellus ac. Sodales nibh pellentesque donec eu ultrices tortor condimentum massa.
+								<p class="item__title text__blog_title text__blog_title">REVIEW OF THE LAST OF US 2. WHAT IS IT
+									ABOUT?.</p>
+								<p class="item__subtitle">An event game that, like the first part will surely be loved by some
+									for years and zealously hated by others. Only this time there will be even more reasons for
+									controversy.
 								</p>
-								<a href="#" class="item__link text__general_bold ">Go to this post</a>
+								<a href="https://youtu.be/fGNMuakcbUI" target="_blank" class="item__link text__general_bold ">Go
+									to this
+									video</a>
 
 							</div>
 						</div>
 					</div>
 					<div class="blog__item">
 						<div class="item__photo">
-							<img src="../../static/images/blog/roosters.png" alt="dog" class="blog__photo">
+							<img src="../../static/images/blog/lanoire.jpg" alt="L.A.Noire" class="blog__photo">
+						</div>
+						<div class="item__column">
+							<div class="item__tags">
+								<div class="tag__wrapper">
+									<img src="../../static/images/icons/tag__orange.svg" alt="">
+								</div>
+								<div class="tag__wrapper">
+									<img src="../../static/images/icons/tag__orange.svg" alt="">
+								</div>
+							</div>
+							<div class="item__properties">
+								<span class="property__data">30.09.2020</span>
+								<span class="property__views">1299 views</span>
+								<span class="property__comments">61 comments</span>
+							</div>
+							<div class="item__text">
+								<p class="item__title text__blog_title">
+									L.A.NOIRE REVIEW - MAFIA'S ANSWER / THE BEST GAME FROM ROCKSTAR GAMES</p>
+								<p class="item__subtitle">In this video, Detective Birlogich will return to his duties to
+									unravel his latest case. I'll also tell you about L.A. Noire is the best game from ROCKSTAR
+									GAMES. Why is Los Angeles so attractive and dangerous in the 40s? See in this video...
+								</p>
+								<a href="https://youtu.be/5GQTBsgyqJA" target="_blank" class="item__link text__general_bold">Go
+									to this
+									video</a>
+
+							</div>
+						</div>
+					</div>
+					<div class="blog__item">
+						<div class="item__photo">
+							<img src="../../static/images/blog/wiiboardstory.jpg" alt="Wii Board" class="blog__photo">
 						</div>
 						<div class="item__column">
 							<div class="item__tags">
@@ -288,22 +331,27 @@
 							</div>
 							<div class="item__properties">
 								<span class="property__data">17.01.2020</span>
-								<span class="property__views">12 views</span>
-								<span class="property__comments">0 comments</span>
+								<span class="property__views">2213 views</span>
+								<span class="property__comments">108 comments</span>
 							</div>
 							<div class="item__text">
-								<p class="item__title text__blog_title">Why do roosters scream in the morning?</p>
-								<p class="item__subtitle">Erat nunc parturient feugiat egestas adipiscing erat eu. Non neque mi
-									volutpat et lectus.
+								<p class="item__title text__blog_title">NINTENDO WII BALANCE BOARD: DEVELOPMENT. PROTOTYPES.
+									GAMES.</p>
+								<p class="item__subtitle">In this video, I tried to collect all the information about this
+									device. I'll tell you about the development history, give quotes from interviews with
+									developers, and show you early prototypes. And I will also test a lot of games that support
+									the Balance Board.
+									Happy viewing!
 								</p>
-								<a href="#" class="item__link text__general_bold">Go to this post</a>
+								<a href="https://youtu.be/lkDLhhdxdJs" target="_blank" class="item__link text__general_bold">Go
+									to this post</a>
 
 							</div>
 						</div>
 					</div>
 					<div class="blog__item">
 						<div class="item__photo">
-							<img src="../../static/images/blog/kangaroo.png" alt="dog" class="blog__photo">
+							<img src="../../static/images/blog/ps5.jpg" alt="Playstation 5" class="blog__photo">
 						</div>
 						<div class="item__column">
 							<div class="item__tags">
@@ -315,52 +363,24 @@
 								</div>
 							</div>
 							<div class="item__properties">
-								<span class="property__data">17.01.2020</span>
-								<span class="property__views">337 views</span>
-								<span class="property__comments">48 comments</span>
+								<span class="property__data">19.10.2020</span>
+								<span class="property__views">20450 views</span>
+								<span class="property__comments">219 comments</span>
 							</div>
 							<div class="item__text">
-								<p class="item__title text__blog_title">Kangaroo. Start.</p>
-								<p class="item__subtitle">At leo at nisl tortor egestas. Mauris luctus est luctus massa tellus
-									erat gravida. Eget aenean eget diam habitant risus. Dapibus et, nec platea felis. Facilisi ut
-									leo arcu, semper id pellentesque quisque ultrices etiam.
+								<p class="item__title text__blog_title">I BOUGHT PLAYSTATION 5!</p>
+								<p class="item__subtitle">In this video, I went to the M.Video store to buy a Playstation 5 on
+									the first day of sales. Happy viewing!
 								</p>
-								<a href="#" class="item__link text__general_bold">Go to this post</a>
+								<a href="https://youtu.be/EDD0KLX5oGk" target="_blank" class="item__link text__general_bold">Go
+									to this post</a>
 
 							</div>
 						</div>
 					</div>
 					<div class="blog__item">
 						<div class="item__photo">
-							<img src="../../static/images/blog/duckling.png" alt="dog" class="blog__photo">
-						</div>
-						<div class="item__column">
-							<div class="item__tags">
-								<div class="tag__wrapper">
-									<img src="../../static/images/icons/tag__orange.svg" alt="">
-								</div>
-								<div class="tag__wrapper">
-									<img src="../../static/images/icons/tag__orange.svg" alt="">
-								</div>
-							</div>
-							<div class="item__properties">
-								<span class="property__data">15.01.2020</span>
-								<span class="property__views">222 views</span>
-								<span class="property__comments">14 comments</span>
-							</div>
-							<div class="item__text">
-								<p class="item__title text__blog_title">Met a duckling at the pond.</p>
-								<p class="item__subtitle">Nulla tempus mauris sed vel bibendum. Felis urna suspendisse amet,
-									laoreet sagittis. Semper pellentesque condimentum vitae morbi in dui. Et in et diam massa.
-								</p>
-								<a href="#" class="item__link text__general_bold">Go to this post</a>
-
-							</div>
-						</div>
-					</div>
-					<div class="blog__item">
-						<div class="item__photo">
-							<img src="../../static/images/blog/dogs.png" alt="dog" class="blog__photo">
+							<img src="../../static/images/blog/vhs.jpg" alt="VHS Collection" class="blog__photo">
 						</div>
 						<div class="item__column">
 							<div class="item__tags">
@@ -377,12 +397,13 @@
 								<span class="property__comments">23 comments</span>
 							</div>
 							<div class="item__text">
-								<p class="item__title text__blog_title">Can dogs also be friends?</p>
-								<p class="item__subtitle">Eu, libero aliquet nibh turpis quis nulla et ullamcorper purus.
-									Consequat egestas sed sagittis morbi lacus. Consectetur et justo, sagittis vitae mi faucibus
-									urna, eu.
+								<p class="item__title text__blog_title">
+									WHAT'S ON THE VHS? RELEASE 1</p>
+								<p class="item__subtitle">This video is humorous in nature and parodies "What's on the
+									headscarves?" channel Gaming for 30. In it, we'll see what's on VHS?
 								</p>
-								<a href="#" class="item__link text__general_bold">Go to this post</a>
+								<a href="https://youtu.be/VB8cGT7pHBg" target="_blank" class="item__link text__general_bold">Go
+									to this post</a>
 
 							</div>
 						</div>
@@ -391,16 +412,7 @@
 				<div class="blog__slider">
 					<button class="blog__arrow blog__arrow_left"><img src="../../static/images/icons/arrow_left.svg"
 							alt=""></button>
-					<div class="blog__numbers">
-						<button class="blog__number text__general_grey">1</button>
-						<button class="blog__number text__general_grey">2</button>
-						<button class="blog__number text__general_grey">3</button>
-						<button class="blog__number text__general_grey">4</button>
-						<button class="blog__number text__general_grey">5</button>
-						<button class="blog__number text__general_grey">6</button>
-						<button class="blog__number text__general_grey">7</button>
-						<button class="blog__number text__general_grey">8</button>
-					</div>
+
 					<button class="blog__arrow blog__arrow_right"><img src="../../static/images/icons/arrow_right.svg"
 							alt=""></button>
 				</div>
@@ -486,12 +498,12 @@
 
 		</div>
 	</div>
-	<script src="./scripts.js"></script>
-	<script src="./scroll.js"></script>
-	<script src="./burger.js"></script>
-	<script src="./popup.js"></script>
-	<script src="./popupMes.js"></script>
-	<script src="./popupReg.js"></script>
+	<script src="../../scripts.js"></script>
+	<script src="../../scroll.js"></script>
+	<script src="../../burger.js"></script>
+	<script src="../../popup.js"></script>
+	<script src="../../popupMes.js"></script>
+	<script src="../../popupReg.js"></script>
 </body>
 
 </html>
