@@ -7,10 +7,14 @@ const buttonNext = document.querySelector('.arrow_next');
 const slidesAmount = innerSliderWrapper.childElementCount;
 
 let activeSlide = 1;
-let activeStr;
-
 
 let slideWidth = +getComputedStyle(sliderWrapper).width.split('px')[0];
+
+const updateStrCount = () => {
+	+localStorage.getItem("activeSlide")
+
+};
+
 
 const addWidthToSlides = () => {
 	for (slide of slides) {
@@ -21,17 +25,17 @@ const addWidthToSlides = () => {
 const changeActiveSlide = (direction) => {
 	innerSliderWrapper.style.transition = 'all 0.5s';
 	const currentML = +innerSliderWrapper.style.marginLeft.split('px')[0];
+	console.log(currentML)
 
 	switch (direction) {
 		case 'next':
 			if (activeSlide < slidesAmount) {
-				activeSlide = activeStr;
 				innerSliderWrapper.style.marginLeft = `${currentML - slideWidth}px`;
 				changeActiveDot(activeSlide);
 				activeSlide++;
-				localStorage.setItem("activeStr", activeSlide);
-				updateStrCount();
 				buttonPrev.removeAttribute('disabled');
+				localStorage.setItem("activeSlide", activeSlide);
+				updateStrCount();
 			}
 
 			if (activeSlide === slidesAmount) {
@@ -42,13 +46,12 @@ const changeActiveSlide = (direction) => {
 
 		case 'prev':
 			if (activeSlide !== 1) {
-				activeSlide = activeStr;
 				innerSliderWrapper.style.marginLeft = `${currentML + slideWidth}px`;
 				activeSlide--;
 				changeActiveDot(activeSlide - 1);
-				localStorage.setItem("activeStr", activeSlide);
-				updateStrCount();
 				buttonNext.removeAttribute('disabled');
+				localStorage.setItem("activeSlide", activeSlide);
+				updateStrCount();
 			}
 
 			if (activeSlide === 1) {
@@ -60,9 +63,6 @@ const changeActiveSlide = (direction) => {
 		default:
 	}
 }
-const updateStrCount = () => {
-	+localStorage.getItem("activeStr")
-};
 
 const changeActiveDot = (index) => {
 	const activeDot = document.querySelector('.slider__dot_active');
@@ -97,8 +97,7 @@ for (let i = 1; i <= slidesAmount; i++) {
 }
 
 addWidthToSlides()
-updateStrCount()
-
+updateStrCount();
 
 buttonNext.addEventListener('click', () => {
 	changeActiveSlide('next');

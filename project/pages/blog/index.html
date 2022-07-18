@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Videos</title>
+	<link rel="stylesheet" href="../../common.css">
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="../../static/fonts/fonts.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+	<meta name="description" content="Портфолио Жигалева Ивана. Страничка с моими видео">
+	<meta name="keywords" content="Подпишись на мой youtube канал Бирлогич">
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="container">
+			<ul class="header__row">
+				<li class="header__main">
+					<a href="../../index.html" class="header__link">Home</a>
+				</li>
+				<li class="header__personal">
+					<ul class="header__list">
+						<li><a href="./index.html" class="header__link">My blog</a>
+						</li>
+						<li><button class="header__link popup__link popup__link_sign">Sign in</button>
+						</li>
+						<li><button class="header__link popup__link popup__link_register">Register</button>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</header>
+
+	<div class="header__mobile">
+		<ul class="header__column">
+			<button type="button" class="burger__close"><img src="../../static/images/icons/burger__close.png"
+					alt=""></button>
+			<li class="header__main header__link"><a href="/">Home</a>
+			</li>
+			<li class="header__link header__link_grey"><a href="../../../pages/blog/index.html">My blog</a>
+			</li>
+			<li class="header__link header__link_grey"><button class="popup__link popup__link_sign">Sign in</button></li>
+			<li class="header__link header__link_grey"><button class="popup__link popup__link_register">Register</button>
+			</li>
+		</ul>
+	</div>
+
+	<div class="scroll__button">
+		<button class="scroll__image">
+			<img src="../../static/images/icons/scroll__button.webp" alt="">
+		</button>
+	</div>
+
+	<div class="popup__sign" id="popup__sign">
+		<div class="container">
+			<form action="#" method="get" class="popup__sign_body">
+				<div class="popup__item popup__item_email">
+					<label for="email" class="text__general_ltl">
+						<p>Email *</p>
+					</label>
+					<input type="email" name="email" id="email">
+				</div>
+				<div class="popup__item popup__item_password">
+					<label for="password" class="text__general_ltl">
+						<p>Password *</p>
+					</label>
+					<input type="password" name="password" id="password">
+				</div>
+				<button class="popup__button btn">
+					<p>Log in</p>
+				</button>
+				<button class="popup__close">
+					<img src="../../static/images/icons/popup__close.png" alt="">
+				</button>
+			</form>
+
+		</div>
+	</div>
+	<div class="popup__register" id="popup__register">
+		<div class="container">
+			<form action="#" method="get" class="popup__register_body">
+				<div class="popup__email">
+					<label for="email" class="text__general_ltl">
+						<p>Email *</p>
+					</label>
+					<input type="email" name="email" id="email">
+				</div>
+				<ul class="popup__personal">
+					<li class="popup__item popup__item_name">
+						<label for="name" class="item__label">
+							<p>Name *</p>
+						</label>
+						<input type="text" name="name" id="name">
+					</li>
+					<li class="popup__item popup__item_surname">
+						<label for="surname" class="item__label">
+							<p>Surname *</p>
+						</label>
+						<input type="text" name="surname" id="surname">
+					</li>
+					<li class="popup__item popup__item_password">
+						<label for="password" class="item__label">
+							<p>Password *</p>
+						</label>
+						<input type="password" name="password" id="password">
+					</li>
+					<li class="popup__item popup__item_repeat">
+						<label for="repeat" class="item__label">
+							<p>Repeat password *</p>
+						</label>
+						<input type="password" name="repeat" id="repeat">
+					</li>
+					<li class="popup__item popup__item_location">
+						<label for="location" class="item__label">
+							<p>Location *</p>
+						</label>
+						<input type="text" name="location" id="location">
+					</li>
+					<li class="popup__item popup__item_age">
+						<label for="age" class="item__label">
+							<p>Age *</p>
+						</label>
+						<input type="text" name="age" id="age">
+					</li>
+
+				</ul>
+				<div class="popup__consent">
+					<input type="checkbox" id="consent" name="consent" value="consent">
+					<label for="consent" class="text__ltl">Clicking on the button, you consent to the processing of
+						your
+						personal data.</label>
+				</div>
+				<button class="popup__button btn" disabled type="submit">
+					Sign up
+				</button>
+				<button class="popup__close_reg">
+					<img src="../../static/images/icons/popup__close.png" alt="">
+				</button>
+			</form>
+
+		</div>
+	</div>
+
+	<main class="main">
+		<div class="container">
+			<div class="main__title">
+				<h1 class="blog__title section__title">My channel</h1>
+				<div class="burger__link">
+					<button type="button" class="burger__button"><img src="../../static/images/icons/burger__menu.png"
+							alt="burger__menu"></button>
+				</div>
+			</div>
+
+			<div class="main__inputs">
+				<form class="inputs" name="filterForm">
+					<div class="input__forms">
+						<div class="input__tags">
+							<p class="input__title">Tags</p>
+							<div class="input__check">
+								<input type="checkbox" id="checkbox_1" class="input__checkbox checkbox_1" value="#2176FF"
+									name="whatTag"><label for="checkbox_1"></label>
+								<input type="checkbox" id="checkbox_2" class="input__checkbox checkbox_2" value="#33A1FD"
+									name="whatTag"><label for="checkbox_2"></label>
+								<input type="checkbox" id="checkbox_3" class="input__checkbox checkbox_3" value="#FDCA40"
+									name="whatTag"><label for="checkbox_3"></label>
+								<input type="checkbox" id="checkbox_4" class="input__checkbox checkbox_4" value="#57E2E5"
+									name="whatTag"><label for="checkbox_4"></label>
+								<input type="checkbox" id="checkbox_5" class="input__checkbox checkbox_5" value="#F79824"
+									name="whatTag"><label for="checkbox_5"></label>
+								<input type="checkbox" id="checkbox_6" class="input__checkbox checkbox_6" value="#E08DAC"
+									name="whatTag"><label for="checkbox_6"></label>
+								<input type="checkbox" id="checkbox_7" class="input__checkbox checkbox_7" value="#6A7FDB"
+									name="whatTag"><label for="checkbox_7"></label>
+								<input type="checkbox" id="checkbox_8" class="input__checkbox checkbox_8" value="#45CB85"
+									name="whatTag"><label for="checkbox_8"></label>
+							</div>
+						</div>
+						<div class="input__views">
+							<p class="input__title">Views</p>
+							<div class="input__radio">
+								<input type="radio" id="viewChoice" class="input__view" name="howView" value="100-500">
+								<label for="viewChoice" class="text__general">100-500</label>
+							</div>
+							<div class="input__radio">
+								<input type="radio" id="viewChoice1" class="input__view" name="howView" value="500-1000">
+								<label for="viewChoice1" class="text__general">500-1000</label>
+							</div>
+							<div class="input__radio">
+								<input type="radio" id="viewChoice2" class="input__view" name="howView" value="1000-2000">
+								<label for="viewChoice2" class="text__general">1000-2000</label>
+							</div>
+						</div>
+						<div class="input__comments">
+							<p class="input__title">Comments</p>
+							<div class="input__comment">
+								<input type="checkbox" id="comentChoice" class="comments" value="0" name="howComments">
+								<label for="comentChoice" class="text__general">0</label>
+							</div>
+							<div class="input__comment">
+								<input type="checkbox" id="comentChoice1" class="comments" value="0-1" name="howComments">
+								<label for="comentChoice1" class="text__general">0-100</label>
+							</div>
+							<div class="input__comment">
+								<input type="checkbox" id="comentChoice2" class="comments" value="1-50" name="howComments">
+								<label for="comentChoice2" class="text__general">100-1000</label>
+							</div>
+						</div>
+						<div class="input__shows">
+							<p class="input__title">How show?</p>
+							<div class="show">
+								<input type="radio" id="showChoice" class="input__show" name="howShow" value="5">
+								<label for="showChoice" class="text__general">show 5</label>
+							</div>
+							<div class="show">
+								<input type="radio" id="showChoice1" class="input__show" name="howShow" value="10">
+								<label for="showChoice1" class="text__general">show 10</label>
+							</div>
+						</div>
+						<div class="input__sorts">
+							<p class="input__title">Sort by</p>
+							<div class="sort">
+								<input type="radio" id="sortChoice" class="input__sort" name="howSort" value="date">
+								<label for="sortChoice" class="text__general">date</label>
+							</div>
+							<div class="sort">
+								<input type="radio" id="sortChoice1" class="input__sort" name="howSort" value="title">
+								<label for="sortChoice1" class="text__general">title</label>
+							</div>
+							<div class="sort">
+								<input type="radio" id="sortChoice2" class="input__sort" name="howSort" value="views">
+								<label for="sortChoice2" class="text__general">views</label>
+							</div>
+						</div>
+						<div class="input__reset">
+							<p class="reset__title text__general_ltl">reset form</p>
+							<button type="reset" class=" btn input__button">
+								Reset
+							</button>
+						</div>
+					</div>
+					<div class="input__text">
+						<input type="text" id="input__text" name="text">
+						<label for="input__text" class="text__general"><button type="submit" class=" btn input__button">
+								Search
+							</button></label>
+					</div>
+				</form>
+			</div>
+			<div class="main__blog">
+				<div class="blog__column">
+					<div class="blog__slider swiper container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide blog__item">
+								<div class="item__photo">
+									<img src="../../static/images/blog/lastofus.jpg" alt="lastofus" class="channel__photo">
+								</div>
+								<div class="item__column">
+									<div class="item__tags">
+										<div class="tag__wrapper">
+											<svg width="30" height="10" viewBox="0 0 30 10" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<rect width="30" height="10" rx="5" fill="#F79824" />
+											</svg>
+										</div>
+										<div class="tag__wrapper">
+											<svg width="30" height="10" viewBox="0 0 30 10" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<rect width="30" height="10" rx="5" fill="#6A7FDB" />
+											</svg>
+										</div>
+									</div>
+									<div class="item__properties">
+										<span class="property__data">25.10.2020</span>
+										<span class="property__views">691 views</span>
+										<span class="property__comments">107 comments</span>
+									</div>
+									<div class="item__text">
+										<p class="item__title text__blog_title text__blog_title">REVIEW OF THE LAST OF US 2. WHAT
+											IS
+											IT
+											ABOUT?.</p>
+										<p class="item__subtitle">An event game that, like the first part will surely be loved by
+											some
+											for years and zealously hated by others. Only this time there will be even more reasons
+											for
+											controversy.
+										</p>
+										<a href="https://youtu.be/fGNMuakcbUI" target="_blank"
+											class="item__link text__general_bold ">Go
+											to this
+											video</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide blog__item">
+								<div class="item__photo">
+									<img src="../../static/images/blog/lanoire.jpg" alt="L.A.Noire" class="blog__photo">
+								</div>
+								<div class="item__column">
+									<div class="item__tags">
+										<div class="tag__wrapper">
+											<svg width="30" height="10" viewBox="0 0 30 10" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<rect width="30" height="10" rx="5" fill="#45CB85" />
+											</svg>
+
+										</div>
+										<div class="tag__wrapper">
+											<svg width="30" height="10" viewBox="0 0 30 10" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<rect width="30" height="10" rx="5" fill="#33A1FD" />
+											</svg>
+
+										</div>
+									</div>
+									<div class="item__properties">
+										<span class="property__data">30.09.2020</span>
+										<span class="property__views">1299 views</span>
+										<span class="property__comments">61 comments</span>
+									</div>
+									<div class="item__text">
+										<p class="item__title text__blog_title">
+											L.A.NOIRE REVIEW - MAFIA'S ANSWER / THE BEST GAME FROM ROCKSTAR GAMES</p>
+										<p class="item__subtitle">In this video, Detective Birlogich will return to his duties to
+											unravel his latest case. I'll also tell you about L.A. Noire is the best game from
+											ROCKSTAR
+											GAMES. Why is Los Angeles so attractive and dangerous in the 40s? See in this video...
+										</p>
+										<a href="https://youtu.be/5GQTBsgyqJA" target="_blank"
+											class="item__link text__general_bold">Go
+											to this
+											video</a>
+
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide blog__item">
+								<div class="item__photo">
+									<img src="../../static/images/blog/wiiboardstory.jpg" alt="Wii Board" class="blog__photo">
+								</div>
+								<div class="item__column">
+									<div class="item__tags">
+										<div class="tag__wrapper">
+											<svg width="30" height="10" viewBox="0 0 30 10" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<rect width="30" height="10" rx="5" fill="#2176FF" />
+											</svg>
+										</div>
+									</div>
+									<div class="item__properties">
+										<span class="property__data">17.01.2020</span>
+										<span class="property__views">2213 views</span>
+										<span class="property__comments">108 comments</span>
+									</div>
+									<div class="item__text">
+										<p class="item__title text__blog_title">NINTENDO WII BALANCE BOARD: DEVELOPMENT.
+											PROTOTYPES.
+											GAMES.</p>
+										<p class="item__subtitle">In this video, I tried to collect all the information about this
+											device. I'll tell you about the development history, give quotes from interviews with
+											developers, and show you early prototypes. And I will also test a lot of games that
+											support
+											the Balance Board.
+											Happy viewing!
+										</p>
+										<a href="https://youtu.be/lkDLhhdxdJs" target="_blank"
+											class="item__link text__general_bold">Go
+											to this post</a>
+
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide blog__item">
+								<div class="item__photo">
+									<img src="../../static/images/blog/ps5.jpg" alt="Playstation 5" class="blog__photo">
+								</div>
+								<div class="item__column">
+									<div class="item__tags">
+										<div class="tag__wrapper">
+											<svg width="30" height="10" viewBox="0 0 30 10" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<rect width="30" height="10" rx="5" fill="#F79824" />
+											</svg>
+										</div>
+										<div class="tag__wrapper">
+											<svg width="30" height="10" viewBox="0 0 30 10" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<rect width="30" height="10" rx="5" fill="#45CB85" />
+											</svg>
+										</div>
+										<div class="tag__wrapper">
+											<svg width="30" height="10" viewBox="0 0 30 10" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<rect width="30" height="10" rx="5" fill="#6A7FDB" />
+											</svg>
+										</div>
+									</div>
+									<div class="item__properties">
+										<span class="property__data">19.10.2020</span>
+										<span class="property__views">20450 views</span>
+										<span class="property__comments">219 comments</span>
+									</div>
+									<div class="item__text">
+										<p class="item__title text__blog_title">I BOUGHT PLAYSTATION 5!</p>
+										<p class="item__subtitle">In this video, I went to the M.Video store to buy a Playstation
+											5
+											on
+											the first day of sales. Happy viewing!
+										</p>
+										<a href="https://youtu.be/EDD0KLX5oGk" target="_blank"
+											class="item__link text__general_bold">Go
+											to this post</a>
+
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide blog__item">
+								<div class="item__photo">
+									<img src="../../static/images/blog/vhs.jpg" alt="VHS Collection" class="blog__photo">
+								</div>
+								<div class="item__column">
+									<div class="item__tags">
+										<div class="tag__wrapper">
+											<svg width="30" height="10" viewBox="0 0 30 10" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<rect width="30" height="10" rx="5" fill="#E08DAC" />
+											</svg>
+										</div>
+										<div class="tag__wrapper">
+											<svg width="30" height="10" viewBox="0 0 30 10" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<rect width="30" height="10" rx="5" fill="#57E2E5" />
+											</svg>
+										</div>
+									</div>
+									<div class="item__properties">
+										<span class="property__data">20.01.2020</span>
+										<span class="property__views">122 views</span>
+										<span class="property__comments">23 comments</span>
+									</div>
+									<div class="item__text">
+										<p class="item__title text__blog_title">
+											WHAT'S ON THE VHS? RELEASE 1</p>
+										<p class="item__subtitle">This video is humorous in nature and parodies "What's on the
+											headscarves?" channel Gaming for 30. In it, we'll see what's on VHS?
+										</p>
+										<a href="https://youtu.be/VB8cGT7pHBg" target="_blank"
+											class="item__link text__general_bold">Go
+											to this post</a>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+						<div class="blog__slider">
+							<button class="swiper__button swiper-button-prev blog__arrow blog__arrow_left"><img
+									src="../../static/images/icons/arrow_left.svg" alt=""></button>
+							<div class="slider__counter"></div>
+							<button class="swiper__button swiper-button-next blog__arrow blog__arrow_right"><img
+									src="../../static/images/icons/arrow_right.svg" alt=""></button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__column">
+				<h2 class="footer__title section__title">Contacts</h2>
+				<p class="footer__description text__general">Want to know more or just chat?
+					You are welcome!</p>
+				<button type="button" class="footer__button btn popup__link_message">
+					Send message
+				</button>
+				<ul class="footer__networks">
+					<li class="footer__item"><a href="#" class="footer__social">
+							<p class="text__general_bold">Instagram</p>
+						</a></li>
+					<li class="footer__item"><a href="#" class="footer__social">
+							<p class="text__general_bold">Vk</p>
+						</a></li>
+					<li class="footer__item"><a href="#" class="footer__social">
+							<p class="text__general_bold">Telegram</p>
+						</a></li>
+					<li class="footer__item"><a href="#" class="footer__social">
+							<p class="text__general_bold">Mail</p>
+						</a></li>
+					<li class="footer__item"><a href="#" class="footer__social">
+							<p class="text__general_bold">GitHub</p>
+						</a></li>
+					<li class="footer__item"><a href="#" class="footer__social">
+							<p class="text__general_bold">Phone</p>
+						</a></li>
+				</ul>
+				<div class="footer__copyrights">
+					<p class="footer__design text__ltl">Design by <a href="https://dlacademy.ru/">DL Academy</a></p>
+					<p class="footer__author text__ltl">Coded by Ivan</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="popup__message" id="message">
+		<div class="container">
+			<form action="#" method="get" class="popup__message_body">
+				<ul class="popup__information">
+					<li class="popup__item"><label for="name" class="item__label">
+							<p>What is your name? *</p>
+						</label>
+						<input type="text" name="name" id="name">
+					</li>
+					<li class="popup__item"><label for="message" class="item__label">
+							<p>Message subject *</p>
+						</label>
+						<input type="text" name="message" id="message">
+					</li>
+					<li class="popup__item"><label for="email" class="item__label">
+							<p>Your Email *</p>
+						</label>
+						<input type="text" name="email" id="email">
+					</li>
+					<li class="popup__item"><label for="phone" class="item__label">
+							<p>Your mobile phone *</p>
+						</label>
+						<input type="text" name="phone" id="phone">
+					</li>
+				</ul>
+				<div class="popup__discuss">
+					<label for="discuss" class="item__label">
+						<p>What do you want to discuss with me?</p>
+					</label>
+					<input type="textarea" class="popup__area" name="discuss" id="discuss">
+				</div>
+				<button class="popup__button btn btn__not" disabled>
+					Sign up
+				</button>
+				<button class="popup__close_mes">
+					<img src="../../static/images/icons/popup__close.png" alt="">
+				</button>
+			</form>
+
+		</div>
+	</div>
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+	<script src="../../scripts.js"></script>
+	<script src="../../scroll.js"></script>
+	<script src="../../burger.js"></script>
+	<script src="../../popup.js"></script>
+	<script src="../../popupMes.js"></script>
+	<script src="../../popupReg.js"></script>
+	<script src="slider.js"></script>
+	<script src="../../forms.js"></script>
+</body>
+
+</html>
