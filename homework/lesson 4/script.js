@@ -1,5 +1,3 @@
-//Homework #4
-//Не справился
 
 function countDown(time) {
 	console.log(`${time} ожидание...`)
