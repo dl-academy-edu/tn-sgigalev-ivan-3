@@ -1,4 +1,4 @@
-const filterForm = document.forms.filterForm;
+/* const filterForm = document.forms.filter;
 
 if (window.location.search) {
 	const params = {};
@@ -73,4 +73,4 @@ filterForm.addEventListener('submit', (e) => {
 	const newUrl = `${baseUrl}?${checkedValuesAsString}`;
 
 	window.location = newUrl;
-})
+}) */

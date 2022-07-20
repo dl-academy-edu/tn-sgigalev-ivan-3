@@ -1,4 +1,4 @@
-
+/* 
 const swiper = new Swiper('.swiper', {
 	// Navigation arrows
 	navigation: {
@@ -6,4 +6,4 @@ const swiper = new Swiper('.swiper', {
 		prevEl: '.swiper-button-prev',
 	},
 
-}); 
+});  */

@@ -36,7 +36,8 @@
 .slider__wrapper{
 	margin-bottom:30px
 }
-.main__designations{
+
+.slider__bottom-panel{
 	display:flex;
 	justify-content:space-between
 }
@@ -49,6 +50,7 @@
 	transition: all 0.5s;
 	margin-right: 7px;
 }
+
 .slider__pagination{
 	align-items: center;
 	display: flex;
@@ -60,6 +62,20 @@
 .slider__dot_active{
 	background: #070707;
 }
+
+.slider__button{
+	transition: all .5s;
+}
+
+.slider__button:disabled {
+	opacity: .3;
+	user-select: none;
+}
+
+.slider__button:hover {
+	opacity: .6;
+}
+
 /*Portfolio*/
 
 
