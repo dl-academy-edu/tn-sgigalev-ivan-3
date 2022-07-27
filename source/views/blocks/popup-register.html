@@ -1,0 +1,68 @@
+<div class="popup-register" id="popup-register">
+	<div class="container">
+		<form action="#" method="get" class="popup-register__form">
+			<div class="popup-register__email">
+				<label for="popup-register-email">
+					Email *
+				</label>
+				<input type="email" name="popup-register-email" id="popup-register-email">
+			</div>
+
+			<ul class="popup-register__personal">
+				<li class="popup-register__item popup-register__item-name">
+					<label for="popup-register__name" class="popup-register__label">
+						Name *
+					</label>
+					<input type="text" class="popup-register__name is-invalid" name="name" id="popup-register__name">
+				</li>
+				<li class="popup-register__item popup-register__item-surname">
+					<label for="popup-register__surname" class="popup-register__label">
+						Surname *
+					</label>
+					<input type="text" name="popup-register__surname" id="opup-register__surname">
+				</li>
+				<li class="popup-register__item popup-register__item-password">
+					<label for="password" class="popup-register__label">
+						Password *
+					</label>
+					<input type="password" name="password" id="password">
+				</li>
+				<li class="popup-register__item popup-register__item-repeat">
+					<label for="popup-register__repeat" class="popup-register__label">
+						Repeat password *
+					</label>
+					<input type="password" name="popup-register__repeat" id="popup-register__repeat">
+				</li>
+				<li class="popup-register__item popup-register__item-location">
+					<label for="popup-register__location" class="popup-register__label">
+						Location *
+					</label>
+					<input type="text" name="popup-register__location" id="popup-register__location">
+				</li>
+				<li class="popup-register__item popup-register__item-age">
+					<label for="popup-register__age" class="popup-register__label">
+						Age *
+					</label>
+					<input type="number" name="popup-register__age" id="popup-register__age">
+				</li>
+			</ul>
+
+			<div class="popup-register__consent">
+				<input type="checkbox" id="popup-register__agreement" name="popup-register__agreement" value="agreement">
+				<label for="popup-register__agreement" class="text-ltl">Clicking on the button, you consent to the
+					processing of
+					your
+					personal data.</label>
+			</div>
+
+			<button type="submit" class="popup-register-button btn">
+				Sign up
+			</button>
+
+			<button class="popup-register__btn">
+				<img src="./static/images/icons/popup__close.png" alt="">
+			</button>
+		</form>
+
+	</div>
+</div>
