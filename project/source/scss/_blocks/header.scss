@@ -36,9 +36,7 @@
 	opacity: 0;
 	visibility: hidden;
 }
-.main__burger {
-	display: none;
-}
+
 .header__link {
 	&:hover {
 		color: #070707;
@@ -99,8 +97,5 @@
 	}
 	.main {
 		margin-top: 30px;
-	}
-	.main__burger {
-		display: block;
 	}
 }

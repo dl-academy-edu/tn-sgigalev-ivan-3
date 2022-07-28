@@ -31,15 +31,7 @@
 				<h1 class="main__top-hero">IVAN ZHIGALEV</h1>
 				<p class="main__top-description text-general">Future front-end developer
 					31 years old, Tolyatti</p>
-				<div class="main__top-burger">
-					<button type="button" class="main__burger-button">
-						<svg width="32" height="20" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<rect y="6.10352e-05" width="32" height="4" rx="2" fill="#070707" />
-							<rect y="8.00006" width="32" height="4" rx="2" fill="#070707" />
-							<rect y="16.0001" width="32" height="4" rx="2" fill="#070707" />
-						</svg>
-					</button>
-				</div>
+				@@include('blocks/burger.html')
 			</div>
 			<div class="main__slider">
 				<div class="main__slider-wrapper">
@@ -203,17 +195,15 @@
 				</div>
 			</div>
 		</section>
-		<div class="main-button">
-			<button class="main-button-image">
-				<img src="./img/icons/scroll__button.webp" alt="">
-			</button>
-		</div>
+		@@include('blocks/main-scroll-button.html')
 	</main>
 	@@include('blocks/footer.html')
 	@@include('blocks/popup-sign.html')
 	@@include('blocks/popup-register.html')
 	@@include('blocks/popup-message.html')
 	<script src="js/app.js" defer></script>
+	<script src="js/common.js"></script>
+	<script src="js/swiper.js"></script>
 </body>
 
 </html>

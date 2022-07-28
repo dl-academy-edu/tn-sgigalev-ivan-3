@@ -12,10 +12,13 @@
 @import "_utils";
 @import "_base";
 
+
 /*
   Import all other blocks
 */
+
 @import "_blocks/container";
 @import "_blocks/footer";
 @import "_blocks/header";
 @import "_blocks/index";
+@import "_blocks/blog";
