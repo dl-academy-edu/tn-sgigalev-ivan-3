@@ -140,13 +140,6 @@ input[type=text] {
 	}
 }
 
-button {
-	&:disabled {
-		color: #e5e5e5;
-		border: 2px solid #e5e5e5;
-	}
-}
-
 /*Main*/
 
 .main__top-hero {
@@ -323,4 +316,15 @@ button {
 		width: 32px;
 		margin-top: 10px;
 	}
+}
+
+
+/*Validation*/
+
+.is-invalid{
+	border: red;
+}
+
+.invalid-feedback{
+	color: red;
 }

@@ -1,10 +1,12 @@
 @import "_variables.base";
 @import "_mixins";
+@import "../fonts/fonts.scss";
 
 /*
   Import vendor libraries
 */
 @import "vendor/_normalize";
+@import "../../node_modules/swiper/swiper.scss";
 
 /*
   Import utils classes and base styles
