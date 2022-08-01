@@ -154,9 +154,9 @@ form.addEventListener("submit", (event) => {
 		return email.match(/^[0-9a-z-\.]+\@[0-9a-z-]{2,}\.[a-z]{2,}$/i);
 	}
 
-	function isPhone(phone) {
-		return phone.match(/^[0-9a-z-\.]+\@[0-9a-z-]{2,}\.[a-z]{2,}$/i);
-	}
+	/* 	function isPhone(phone) {
+			return phone.match(/^[0-9a-z-\.]+\@[0-9a-z-]{2,}\.[a-z]{2,}$/i);
+		} */
 
 	function setError(input, errorMessage) {
 		const error = errorCreator(errorMessage);

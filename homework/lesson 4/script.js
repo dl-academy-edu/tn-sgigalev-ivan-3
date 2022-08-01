@@ -1,14 +1,25 @@
+// 1. Составить 3 мини-рассказа, используя исходные данные и соблюдая следующие требования:
+// - Если длина списка с ЯП испытавшими влияние больше 4, то показывать только первые 4 элемента списка и делать 
+// приписку “и другие языки программирования”.
+// - Перед расширениями файлов должна стоять точка.
+// - Структура рассказа должна соответствовать шаблону.
+// 2. Перед выводом информации в консоль, предупредите, что информация будет выведена через 10 секунд и запустите 
+// обратный счетчик.
 
-console.log('Через 10 секунд будет выведена информация')
-function countDown(time) {
-	console.log(`${time} ожидание...`)
-	if (time > 0) {
-		setTimeout(countDown, 1000, --time);
-	}
-}
-countDown(9)
+//Шаблон
+// Название ЯП - язык программирования выпущен в ГОД ВЫПУСКА ЯП году.
+// Автором языка стал АВТОР ЯП - РОД ДЕЯТЕЛЬНОСТИ ЯП.
+// Файлы программ, написанных на НАЗВАНИЕ ЯП, могут иметь расширения РАСШИРЕНИЯ ФАЙЛОВ.
+// НАЗВАНИЕ ЯП испытал влияние ДЛИННА СПИСКА С ЯП ОКАЗАВШИМИ ВЛИЯНИЕ языков программирования: СПИСОК ЯП ОКАЗАВШИХ ВЛИЯНИЕ.
+// НАЗВАНИЕ ЯП повлиял на ЯП ИСПЫТАВШИЕ ВЛИЯНИЕ.
 
 
+
+//Исходные данные
+
+// developers - авторя ЯП
+// name - имя автора
+// work - род деятельности автора
 const developers = [
 	{
 		index: 0,
@@ -27,6 +38,15 @@ const developers = [
 	}
 ]
 
+
+
+// data - ЯП про которые должны быть рассказы
+// name - название ЯП
+// year - год выпуска ЯП
+// filenameExtensions -расширения файлов
+// influencedBy - ЯП оказавшие влияние
+// affectedBy - ЯП испытавшие влияние ЯП
+// developerIndex - уникальный идентификатор автора языка программирования
 const data = [
 	{
 		name: "JavaScript",
@@ -54,6 +74,50 @@ const data = [
 	},
 ];
 
+let extensions = (stringOfExtensions) => {
+	let newExtensions = stringOfExtensions.split(', ')
+	let outOfExtension = []
+	newExtensions.forEach(element => {
+		outOfExtension.push('.' + element)
+	});
+	return outOfExtension
+}
 
+let affectedCut = (stringOfInfluenced) => {
+	let influencedByResult = stringOfInfluenced.slice(0, 4)
+	influencedByResult = influencedByResult.join(', ')
+	if (stringOfInfluenced.length > 4) influencedByResult += 'и другие языки программирования';
+	return influencedByResult
+}
 
+(function () {
+	let outData = data.map(element => ({
+		name: element.name,
+		year: element.year,
+		filenameExtensions: extensions(element.filenameExtensions),
+		influencedBy: element.influencedBy.join(", "),
+		affectedBy: affectedCut(element.affectedBy),
+		developer: developers.find(item => item.index === element.developerIndex),
+	})
+	)
 
+	console.log("Через 10 секунд будет выведена информация.")
+	let countTime = 10;
+	let finalSetinterval = setInterval(() => {
+		countTime--;
+		console.log(`${countTime} Ожидание...`);
+	}, 1000);
+
+	setTimeout(() => {
+		clearInterval(finalSetinterval);
+		outData.forEach((element, index) => {
+			console.log(`
+				  ${element.name} - язык программирования выпущен в ${element.year} году.
+				  Автором языка стал ${element.developer.name} - ${element.developer.work}.
+				  Файлы программ, написанных на ${element.name}, могут иметь расширения ${element.filenameExtensions}.
+				  ${element.name} испытал влияние на ${element.influencedBy.length} языков программирования: ${element.influencedBy}.
+				  ${element.name} повлиял на ${element.affectedBy}.
+			 `)
+		})
+	}, 10000);
+})()

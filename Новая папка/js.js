@@ -1,9 +1,9 @@
-let factorial = (n) => {
-	let result = 1;
-	for (let i = 1; i <= n; i++) {
-		result = n * i;
-		return result;
+let addDigits = (word) => {
+	let str = '';
+	for (i = 0; i <= word.length; i++) {
+		str += word[i]
 	}
+	return str
 }
-factorial(5)
 
+addDigits(ffkfkfk)
