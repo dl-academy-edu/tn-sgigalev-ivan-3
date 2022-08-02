@@ -135,74 +135,82 @@ function backToTop() {
 }
 
 //Form-register
+function isEmail(email) {
+	return email.match(/^[0-9a-z-\.]+\@[0-9a-z-]{2,}\.[a-z]{2,}$/i);
+}
 
-const form = document.forms[1];
+function setError(input, errorMessage) {
+	const error = errorCreator(errorMessage)
+	input.classList.add('is-invalide');
+	input.insertAdjacentElement('afterend', error)
+}
+
+function errorCreator(message) {
+	let messageError = document.createElement('div')
+	messageError.classList.add('invalide-feedback')
+	messageError.innerText = message;
+	return messageError
+}
+
+(function () {
+	const formReg = document.forms.popupRegister;
+
+	formReg.addEventListener('submit', function (e) {
+		e.preventDefault()
+
+		const email = formReg.elements.popupRegisterEmail
+		const name = formReg.elements.popupRegisterName
+		const surname = formReg.elements.popupRegisterSurname
+		const password = formReg.elements.popupRegisterPassword
+		const repeat = formReg.elements.popupRegisterRepeat
+		const location = formReg.elements.popupRegisterLocation
+		const age = formReg.elements.popupRegisterAge
+		const agreement = formReg.elements.popupRegisterAgreement
+
+		let error = {};
+
+		if (!agreement.checked) {
+			error.agreement = 'Пожалуйста подтвердите соглашение!';
+		}
+		if (!isEmail(email.value)) {
+			error.email = 'Please enter a valid email address (your entry is not in the format "somebody@example.com")';
+		}
+		if (password.value.length < 6) {
+			error.password = 'Пароль слишком короткий!';
+		}
+		if (password.value != repeat.value) {
+			error.repeat = 'Введенные пароли не совпадают';
+		}
+		if (name.value.length < 1) {
+			error.name = 'This field is required';
+		}
+		if (name.value.length > 2) {
+			error.name = 'All Right';
+		}
+		if (Object.keys(error).length) {
+			console.log(error)
+			Object.keys(error).forEach(key => {
+				const messageError = error[key]
+				const input = formReg.elements[key]
+				console.log(input, key)
+				setError(input, messageError);
+			})
+			console.log(errorCreator(error.email))
+			return
+		}
 
 
-form.addEventListener("submit", (event) => {
-	event.preventDefault();
+		const data = {
+			email: email.value,
+			name: name.value,
+			surname: surname.value,
+			password: password.value,
+			repeat: repeat.value,
+			location: location.value,
+			age: age.value,
+			agreement: agreement.value,
+		}
+		console.log(data)
+	})
+})();
 
-	const agreement = form.querySelector(`[name ="agreement"]`)
-	const text = form.querySelector(`[type='text']`)
-	const password = form.querySelector(`[type='password']`)
-	const email = form.querySelector(`[type='email']`)
-	const number = form.querySelector(`[type='number']`)
-	const input = form.querySelectorAll('input');
-	const name = form.querySelector('#popup-register-name');
-
-	function isEmail(email) {
-		return email.match(/^[0-9a-z-\.]+\@[0-9a-z-]{2,}\.[a-z]{2,}$/i);
-	}
-
-	/* 	function isPhone(phone) {
-			return phone.match(/^[0-9a-z-\.]+\@[0-9a-z-]{2,}\.[a-z]{2,}$/i);
-		} */
-
-	function setError(input, errorMessage) {
-		const error = errorCreator(errorMessage);
-		input.classList.add('is-invalid');
-		input.insertAdjacentElement('afterend', error);
-	}
-
-	function errorCreator(message) {
-		let messageError = document.createElement('div');
-		messageError.classList.add('invalid-feedback');
-		messageError.innerText = message;
-		return messageError;
-	}
-
-	let error = {};
-
-	if (!isEmail(email.value)) {
-		error.email = 'Please enter a valid email address (your entry is not in the format "somebody@example.com")'
-	}
-
-	if (password.value.length < 6) {
-		error.password = 'Пароль слишком короткий!'
-	}
-
-	if (name.value.length < 1) {
-		error.name = 'This field is required'
-	}
-
-	if (Object.keys(error).length) {
-		console.log(error);
-		Object.keys(error).forEach(key => {
-			const messageError = error[key];
-			const input = form.elements[key];
-			setError(input, messageError);
-		})
-		console.log(errorCreator(error.email));
-		return;
-	}
-
-
-	const dataForServer = {};
-	for (input of inputs) {
-		dataForServer[input.name] = input.checked
-			? input.checked
-			: input.value;
-	}
-
-	console.log(dataForServer);
-});
