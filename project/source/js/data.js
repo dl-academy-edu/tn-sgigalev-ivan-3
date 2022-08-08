@@ -148,7 +148,7 @@ function getData(params) {
 		const result = document.querySelector('.result-js')
 		result.innerHTML = dataPosts
 
-		const links = document.querySelectorAll('.link-js')
+		const links = document.querySelector('.pagination-js')
 		links.innerHTML = ''
 		const pageCount = Math.ceil(response.count / LIMIT)
 		for (let i = 0; i < pageCount; i++) {
@@ -159,8 +159,10 @@ function getData(params) {
 }
 
 function linkElementCreate(page) {
+
 	const link = document.createElement('a')
 	link.href = '?page=' + page;
+	link.classList.add('link-js')
 	let params = getParamsFromLocation();
 	link.innerText = page + 1;
 	if (page === +params.page) {
@@ -169,11 +171,12 @@ function linkElementCreate(page) {
 
 	link.addEventListener('click', (e) => {
 		e.preventDefault()
+		const links = document.querySelectorAll('.link-js')
 		let searchParams = new URLSearchParams(location.search);
 		let params = getParamsFromLocation();
 		links[params.page].classList.remove('link-js_active')
-		searchParams.set('page', index)
-		links[index].classList.add('link-js_active')
+		searchParams.set('page', page)
+		links[page].classList.add('link-js_active')
 		history.replaceState(null, null, '?' + searchParams.toString());
 		getData(getParamsFromLocation())
 	})
