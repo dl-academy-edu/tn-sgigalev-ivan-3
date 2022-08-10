@@ -1,6 +1,8 @@
 const SERVER_URL = 'https://academy.directlinedev.com';
 const LIMIT = 10;
 
+
+
 (function () {
 	const form = document.forms.filter;
 	form.addEventListener('submit', e => {
@@ -99,6 +101,7 @@ function setSearchParams(data) {
 }
 
 function getData(params) {
+	const result = document.querySelector('.result-js')
 	let xhr = new XMLHttpRequest();
 	let searchParams = new URLSearchParams()
 	searchParams.set('v', '1.0.0')
@@ -128,8 +131,13 @@ function getData(params) {
 		searchParams.set('sort', JSON.stringify([params.sortBy, 'ASC']))
 	}
 
+
+
 	xhr.open('GET', SERVER_URL + '/api/posts?' + searchParams.toString())
 	xhr.send();
+	result.innerHTML = createPreloader()
+	const links = document.querySelector('.pagination-js')
+	links.innerHTML = ''
 	xhr.onload = () => {
 		const response = JSON.parse(xhr.response)
 		console.log(response)
@@ -145,11 +153,9 @@ function getData(params) {
 				tags: post.tags,
 			})
 		})
-		const result = document.querySelector('.result-js')
+
 		result.innerHTML = dataPosts
 
-		const links = document.querySelector('.pagination-js')
-		links.innerHTML = ''
 		const pageCount = Math.ceil(response.count / LIMIT)
 		for (let i = 0; i < pageCount; i++) {
 			const link = linkElementCreate(i)
@@ -211,4 +217,14 @@ function cardCreate({ title, text, src, commentsCount, date, views, tags }) {
 function createTag({ id, }) {
 	return `<input type="checkbox" id="${id}" class="input__checkbox checkbox_${id}" value="${id}"
 name="tags"><label for="${id}"></label>`
+}
+
+function createPreloader() {
+	return `		<div class="preloader">
+	<svg class="preloader__image" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+		<path fill="currentColor"
+			d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
+		</path>
+	</svg>
+</div>`
 }

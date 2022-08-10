@@ -1,0 +1,33 @@
+.main__title {
+	margin-bottom: 40px;
+}
+.main__row {
+	display: flex;
+	align-items: flex-start;
+}
+.main__canvas {
+	margin-left: -20px;
+	max-width: 320px;
+	margin-right: 105px;
+}
+.main__buttons {
+	display: flex;
+	flex-direction: column;
+}
+.main__column {
+	display: flex;
+	flex-direction: column;
+}
+.main__personal {
+	margin-top: 20px;
+	margin-bottom: 40px;
+	li {
+		margin-bottom: 20px;
+	}
+}
+.main__button {
+	margin-bottom: 20px;
+	&:nth-last-child(-n+1) {
+		margin-bottom: 0;
+	}
+}
