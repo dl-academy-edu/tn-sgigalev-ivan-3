@@ -6,7 +6,6 @@
 	align-items: flex-start;
 }
 .main__canvas {
-	margin-left: -20px;
 	max-width: 320px;
 	margin-right: 105px;
 }
@@ -30,4 +29,17 @@
 	&:nth-last-child(-n+1) {
 		margin-bottom: 0;
 	}
+}
+
+.main__text span{
+	margin-left: 20px;
+}
+
+.main__canvas-image{
+	max-width: 320px;
+	max-height: 450px;
+}
+
+.main__top-hero{
+	margin-bottom: 40px;
 }

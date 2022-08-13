@@ -5,6 +5,8 @@ const popupSign = document.querySelector('.popup-sign');
 const closePopup = document.querySelector('.popup-sign__btn');
 const signForm = document.forms.popupLogin;
 
+rerenderLinks()
+
 popupLinkSign.addEventListener('click', function () {
 	popupSign.classList.add('popup-sign_open');
 	signForm.focus();
@@ -45,13 +47,22 @@ function login(e) {
 				console.log(res)
 				localStorage.setItem('token', res.data.token)
 				localStorage.setItem('userId', res.data.userId)
+				rerenderLinks()
+				popupSign.classList.remove('popup-sign_open');
+				setTimeout(() => {
+					location.pathname = '../../profile.html'
+				}, 1000)
 			} else {
 				throw res
 			}
 		})
 		.catch(err => {
+			if (err._message) {
+				alert(err._message)
+			}
 			console.error(err);
 		});
 }
 
 signForm.addEventListener('submit', login)
+

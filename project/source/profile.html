@@ -34,27 +34,38 @@
 				<h1 class="main__top-hero">My profile</h1>
 				@@include('blocks/burger.html')
 				<div class="main__row">
-					<div class="main__canvas">
-						<img src="./img/profile/canvas.svg" alt="">
+					<div class="main__canvas j-main__canvas-img">
+
 					</div>
 					<div class="main__info">
 						<div class="main__column">
 							<ul class="main__personal">
-								<li class="main__text">Name:</li>
-								<li class="main__text">Surname:</li>
-								<li class="main__text">Email:</li>
-								<li class="main__text">Password:</li>
-								<li class="main__text">Location:</li>
-								<li class="main__text">Age:</li>
+								<li class="main__text text-general-bold">Name: <span class="j-main__text-name"></span>
+								</li>
+								<li class="main__text text-general-bold">Surname:<span class="j-main__text-surname">
+									</span>
+								</li>
+								<li class=" main__text text-general-bold">Email:<span class="j-main__text-email">
+									</span>
+								</li>
+								<li class="main__text text-general-bold">Password:<span class="j-main__text-password">*********
+									</span>
+								</li>
+								<li class=" main__text text-general-bold">Location:<span class="j-main__text-location">
+									</span>
+								</li>
+								<li class="main__text text-general-bold">Age:<span class="j-main__text-age">
+									</span>
+								</li>
 							</ul>
-							<div class="main__buttons">
-								<button class="main__button btn">
+							<div class=" main__buttons">
+								<button class="main__button btn j-change-password">
 									<p>Change password</p>
 								</button>
-								<button class="main__button btn">
+								<button class="main__button btn j-change-data">
 									<p>Change other data</p>
 								</button>
-								<button class="main__button btn">
+								<button class="main__button btn j-delete-account">
 									<p>Delete account</p>
 								</button>
 							</div>
@@ -63,17 +74,19 @@
 				</div>
 			</section>
 		</div>
+		@@include('blocks/main-scroll-button.html')
 	</main>
 	@@include('blocks/footer.html')
 	@@include('blocks/popup-sign.html')
 	@@include('blocks/popup-register.html')
 	@@include('blocks/popup-message.html')
-
+	@@include('blocks/popup-change-password.html')
+	@@include('blocks/popup-editing-data.html')
 	<script src="js/app.js" defer></script>
 	<script src="js/common.js" defer></script>
-	<script src="js/data.js" defer></script>
 	<script src="js/register.js" defer></script>
 	<script src="js/login.js" defer></script>
+	<script src="js/profile.js" defer></script>
 </body>
 
 </html>

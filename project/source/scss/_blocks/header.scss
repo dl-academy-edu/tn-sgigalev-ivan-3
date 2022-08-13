@@ -12,9 +12,17 @@
 			flex: 1 1 auto;
 			margin: 0;
 		}
-		margin-left: 20px;
 	}
 }
+
+.header__link{
+	margin-left: 20px;
+}
+
+.first-link{
+	margin: 0;
+}
+
 .header__mobile {
 	display: none;
 }

@@ -35,7 +35,7 @@ body {
 	&_wht {
 		color: #fff;
 }
-	&_bold {
+	&-bold {
 	font-weight: 700;
 }
 	&_grey {
@@ -154,7 +154,11 @@ input[type=text] {
 	color: $color-link;
 	font-weight: 700;
 }
-.popup-sign {
+.popup-sign,
+.popup-change-password,
+.popup-register,
+.popup-editing-data,
+.popup-message {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -174,7 +178,7 @@ input[type=text] {
 	}
 	&__form{
 		position: relative;
-		width: 370px;
+		max-width: 680px;
 		padding: 40px;
 		background: #fff;
 		border: 2.5px solid #070707;
@@ -182,60 +186,32 @@ input[type=text] {
 }
 
 
-.popup__item-email {
-	margin-bottom: 20px;
-}
+.popup__item-email,
 .popup__item-password {
 	margin-bottom: 20px;
 }
-.popup-sign__btn {
+
+.popup-sign__btn,
+.popup-message__btn,
+.popup-register__btn,
+.popup-change-password__btn,
+.popup-editing-data__btn {
 	position: absolute;
 	top: -1px;
 	right: -33px;
-}
-.popup-message__btn {
-	position: absolute;
-	top: -1px;
-	right: -33px;
-}
-.popup-register__btn {
-	position: absolute;
-	top: -1px;
-	right: -33px;
-}
-.popup-register {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100vh;
-	background: rgba(246,246,246,.99);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	z-index: 5;
-	opacity: 0;
-	visibility: hidden;
-	&_open{
-		opacity: 1;
-		visibility: visible;
-	}
-	&__item {
-	width: 50%;
-	padding: 0 10px 0 10px;
-	margin-bottom: 20px;
-}
 }
 
 .popup-register__form,
-.popup-message__form {
+.popup-message__form,
+.popup-editing-data__form {
 	position: relative;
 	max-width: 680px;
 	padding: 40px;
 	background: #fff;
 	border: 2.5px solid #070707;
 }
-.popup-register__personal {
+.popup-register__personal,
+.popup-editing-data__personal {
 	display: flex;
 	margin: 0 -10px 20px;
 	flex-wrap: wrap;
@@ -248,39 +224,19 @@ input[type=text] {
 }
 
 
-.popup-message {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100vh;
-	background: rgba(246,246,246,.99);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	z-index: 5;
-	visibility: hidden;
-}
-.popup-message_open {
-	opacity: 1;
-	visibility: visible;
-}
-.popup-message_form {
-	position: relative;
-	max-width: 680px;
-	padding: 40px;
-	background: #fff;
-	border: 2.5px solid #070707;
-}
 .popup-message__information {
 	display: flex;
 	margin: 0 -10px 20px;
 	flex-wrap: wrap;
 }
-.popup-message__item {
+.popup-message__item,
+.popup-register__item,
+.popup-editing-data__item {
 	flex: 1 1 50%;
 	padding: 0 10px;
-	margin-bottom: 20px;
+}
+.popup-editing-data__item:last-child{
+	max-width: 305px;
 }
 .popup-message__discuss {
 	margin-bottom: 20px;
@@ -339,9 +295,9 @@ input[type=text] {
 	/* фоновый цвет */
 	background: transparent;
 	z-index: 1001;
- }
- 
- .preloader__image {
+}
+
+.preloader__image {
 	position: relative;
 	top: 50%;
 	left: 50%;
@@ -351,19 +307,36 @@ input[type=text] {
 	margin-left: -35px;
 	text-align: center;
 	animation: preloader-rotate 2s infinite linear;
- }
- 
- @keyframes preloader-rotate {
+}
+
+@keyframes preloader-rotate {
 	100% {
-	  transform: rotate(360deg);
+		transform: rotate(360deg);
 	}
- }
- 
- .loaded_hiding .preloader {
+}
+
+.loaded_hiding .preloader {
 	transition: 0.3s opacity;
 	opacity: 0;
- }
- 
- .loaded .preloader {
+}
+
+.loaded .preloader {
 	display: none;
- }
+}
+
+//Popup-editing-data
+.popup-editing-data__personal{
+	margin: 0 -10px 20px;
+}
+
+.popup-editing-data-file{
+	margin-bottom: 20px;
+}
+
+.popup-editing-data__picture{
+	max-width: 290px;
+	border: 2.5px solid #e5e5e5;
+	max-height: 50px;
+	padding: 14px;
+}
+

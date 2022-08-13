@@ -14,8 +14,18 @@ function rerenderLinks() {
 	const loginButton = document.querySelector('.header__link-sign');
 	const registerButton = document.querySelector('.header__link-register');
 	const toProfileButton = document.querySelector('.header__link-profile');
-}
+	const isLogin = localStorage.getItem('token');
 
+	if (isLogin) {
+		toProfileButton.classList.remove('hidden');
+		registerButton.classList.add('hidden')
+		loginButton.classList.add('hidden')
+	} else {
+		toProfileButton.classList.add('hidden');
+		registerButton.classList.remove('hidden')
+		loginButton.classList.remove('hidden')
+	}
+}
 //Popup-message
 
 const popupLinkMes = document.querySelector('.popup__link-message');
