@@ -74,29 +74,24 @@ const data = [
 	},
 ];
 
-let extensions = (stringOfExtensions) => {
-	let newExtensions = stringOfExtensions.split(', ')
-	let outOfExtension = []
-	newExtensions.forEach(element => {
-		outOfExtension.push('.' + element)
-	});
-	return outOfExtension
+const getExtensions = (ext) => {
+	return ext.split(', ').map((extension) => { return `.${extension}` });
 }
 
-let affectedCut = (stringOfInfluenced) => {
-	let influencedByResult = stringOfInfluenced.slice(0, 4)
-	influencedByResult = influencedByResult.join(', ')
-	if (stringOfInfluenced.length > 4) influencedByResult += 'и другие языки программирования';
-	return influencedByResult
+const cutAffectedBy = (exp) => {
+	let newExp = exp.slice(0, 4)
+	newExp = newExp.join(', ')
+	if (exp.length > 4) newExp += 'и другие языки программирования';
+	return newExp
 }
 
 (function () {
 	let outData = data.map(element => ({
 		name: element.name,
 		year: element.year,
-		filenameExtensions: extensions(element.filenameExtensions),
+		filenameExtensions: getExtensions(element.filenameExtensions),
 		influencedBy: element.influencedBy.join(", "),
-		affectedBy: affectedCut(element.affectedBy),
+		affectedBy: cutAffectedBy(element.affectedBy),
 		developer: developers.find(item => item.index === element.developerIndex),
 	})
 	)
@@ -110,7 +105,7 @@ let affectedCut = (stringOfInfluenced) => {
 
 	setTimeout(() => {
 		clearInterval(finalSetinterval);
-		outData.forEach((element, index) => {
+		outData.forEach((element) => {
 			console.log(`
 				  ${element.name} - язык программирования выпущен в ${element.year} году.
 				  Автором языка стал ${element.developer.name} - ${element.developer.work}.

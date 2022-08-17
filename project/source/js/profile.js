@@ -19,6 +19,9 @@
 	const closeModalEditingData = document.querySelector('.popup-editing-data__btn')
 	const modalEditingDataForm = document.forms.popupEditingData
 
+	const deleteAccount = document.querySelector('.j-delete-account')
+
+
 	let profile = null;
 
 	buttonOpeningModalChangePassword.addEventListener('click', function () {
@@ -93,9 +96,34 @@
 			})
 	})
 
+	deleteAccount.addEventListener('click', function () {
+		sendRequest({
+			method: 'DELETE',
+			url: `/api/users/${localStorage.getItem('userId')}`,
+			headers: {
+				'x-access-token': localStorage.getItem('token'),
+			}
+		})
+			.then(res => res.json())
+			.then(res => {
+				if (res.success) {
+					console.log(res)
+					localStorage.remove('userId');
+					location.pathname = '/'
+				} else {
+					throw res
+				}
+			})
+			.catch(err => {
+				alert(err._message)
+			})
+	})
 
 	function renderProfile() {
-		profileImg.innerHTML = `<img src="${BASE_SERVER_PATH + profile.photoUrl}" alt="" class="main__canvas-image"></img>`
+		profileImg.innerHTML = `<picture class="main__canvas-image">
+		<source srcset="${BASE_SERVER_PATH + profile.photoUrl}">
+			<img src="../source/img/profile/canvas.png">
+		</picture>`
 		profileName.innerText = profile.name;
 		profileSurname.innerText = profile.surname;
 		profileEmail.innerText = profile.email;
@@ -120,3 +148,5 @@
 			})
 	}
 })()
+
+
