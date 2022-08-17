@@ -1,123 +1,141 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+html {
+	box-sizing: border-box;
+	text-size-adjust: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
 
 * {
 	padding: 0;
 	margin: 0;
 	border: 0;
- }
- 
- *,
- *:before,
- *:after {
+}
+
+*,
+*:before,
+*:after {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
- }
- 
- :focus,
- :active {
+}
+
+:focus,
+:active {
 	outline: none;
- }* {
-	padding: 0;
-	margin: 0;
-	border: 0;
- }
- 
- *,
- *:before,
- *:after {
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
- }
- 
- :focus,
- :active {
+}
+
+a:focus,
+a:active {
 	outline: none;
- }
- 
- a:focus,
- a:active {
-	outline: none;
- }
- 
- nav,
- footer,
- header,
- aside {
+}
+
+nav,
+footer,
+header,
+aside {
 	display: block;
- }
- 
- html,
- body {
+}
+
+html,
+body {
+	background-color: $color-bg;
+	color: $color-text;
+	font-family: $gilroy;
 	height: 100%;
 	width: 100%;
+	margin: 0 auto;
+	min-height: 100%;
 	font-size: 100%;
 	line-height: 1;
 	font-size: 14px;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
- }
- 
- input,
- button,
- textarea {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	color: $color-link;
+}
+
+input,
+button,
+textarea {
 	font-family: inherit;
- }
- 
- input::-ms-clear {
+}
+
+input::-ms-clear {
 	display: none;
- }
- 
- button {
+}
+
+button {
 	cursor: pointer;
- }
- 
- button::-moz-focus-inner {
+}
+
+button::-moz-focus-inner {
 	padding: 0;
 	border: 0;
- }
- 
- a,
- a:visited {
+}
+
+a,
+a:visited {
 	text-decoration: none;
- }
- 
- a:hover {
+}
+
+a:hover {
 	text-decoration: none;
- }
- 
- ul li {
+}
+
+ul li {
 	list-style: none;
- }
- 
- img {
+}
+
+img {
 	vertical-align: top;
- }
- 
- h1,
- h2,
- h3,
- h4,
- h5,
- h6 {
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-size: inherit;
 	font-weight: inherit;
- }
- 
- 
- a:focus,
- a:active {
+}
+
+
+a:focus,
+a:active {
 	outline: none;
- }
- 
- nav,
- footer,
- header,
- aside {
+}
+
+nav,
+footer,
+header,
+aside {
 	display: block;
- }
- 
- html,
- body {
+}
+
+html,
+body {
 	height: 100%;
 	width: 100%;
 	font-size: 100%;
@@ -126,57 +144,57 @@
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
- }
- 
- input,
- button,
- textarea {
+}
+
+input,
+button,
+textarea {
 	font-family: inherit;
- }
- 
- input::-ms-clear {
+}
+
+input::-ms-clear {
 	display: none;
- }
- 
- button {
+}
+
+button {
 	cursor: pointer;
- }
- 
- button::-moz-focus-inner {
+}
+
+button::-moz-focus-inner {
 	padding: 0;
 	border: 0;
- }
- 
- a,
- a:visited {
+}
+
+a,
+a:visited {
 	text-decoration: none;
- }
- 
- a:hover {
+}
+
+a:hover {
 	text-decoration: none;
- }
- 
- 
- img {
+}
+
+
+img {
 	vertical-align: top;
- }
+}
 
- li {
-   list-style-type: none;
- }
+li {
+	list-style-type: none;
+}
 
- 
- h1,
- h2,
- h3,
- h4,
- h5,
- h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-size: inherit;
 	font-weight: inherit;
- }
- 
- button{
+}
+
+button {
 	padding: 0;
 	border: none;
 	font: inherit;
@@ -186,14 +204,45 @@
 }
 
 
-input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
-input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
-input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
-input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
-input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
-input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
-input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
-input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+input::-webkit-input-placeholder {
+	opacity: 1;
+	transition: opacity 0.3s ease;
+}
+
+input::-moz-placeholder {
+	opacity: 1;
+	transition: opacity 0.3s ease;
+}
+
+input:-moz-placeholder {
+	opacity: 1;
+	transition: opacity 0.3s ease;
+}
+
+input:-ms-input-placeholder {
+	opacity: 1;
+	transition: opacity 0.3s ease;
+}
+
+input:focus::-webkit-input-placeholder {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+input:focus::-moz-placeholder {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+input:focus:-moz-placeholder {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+input:focus:-ms-input-placeholder {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
 
 [tabindex='1']:focus-visible {
 	outline: auto;

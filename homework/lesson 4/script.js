@@ -85,6 +85,7 @@ const cutAffectedBy = (exp) => {
 	return newExp
 }
 
+
 (function () {
 	let outData = data.map(element => ({
 		name: element.name,
