@@ -1,21 +1,9 @@
-//Function isNan
-
-let isNumber = (value) => {
-	if (value > 0) {
-		return true;
-	}
-	if (value = '' || ' ') {
-		console.log('Enter the valid number.');
-		return false;
-	}
-}
-
 /*1*/
 
 const numberFromUser = prompt('Назовите любое число');
 let listofNumbers = '';
 
-if (isNumber(numberFromUser)) {
+if (isPositiveNumber(numberFromUser)) {
 	for (let i = 1; i < numberFromUser; i++) {
 		if (i % 4 == 0) continue;
 		listofNumbers += i + ' ';
@@ -50,7 +38,7 @@ const enterTheNumber = prompt('Назовите любое число');
 const enterDegree = prompt('Назовите степень в какую вы хотите возводить число');
 let sum = 1;
 
-if (isNumber(enterTheNumber) && isNumber(enterDegree)) {
+if (isPositiveNumber(enterTheNumber) && isPositiveNumber(enterDegree)) {
 	for (let i = 1; i <= enterDegree; i++) {
 		sum *= enterTheNumber;
 	}
@@ -62,14 +50,14 @@ if (isNumber(enterTheNumber) && isNumber(enterDegree)) {
 
 const inspectNumber = prompt('Введите любое число');
 
-isNumber(inspectNumber)
+isPositiveNumber(inspectNumber)
 
 /*5*/
 
 const rand = Math.floor(1 + Math.random() * 10);
 let userNumber = prompt('Введите случайное число');
 
-if (isNumber(userNumber)) {
+if (isPositiveNumber(userNumber)) {
 	while (userNumber) {
 		if (userNumber === rand) {
 			alert(`Вы угадали, это число - ${rand}!`);

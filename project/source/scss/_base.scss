@@ -173,14 +173,27 @@ input[type=text] {
 	}
 
 	&__form {
-		position: relative;
 		max-width: 680px;
 		padding: 40px;
 		background: #fff;
 		border: 2.5px solid #070707;
 	}
+	@media (max-width:320px) {
+		background-color: #fff;
+		overflow-y: auto;
+	}
 }
 
+.popup-sign-body,
+.popup-change-password-body,
+.popup-register-body,
+.popup-editing-data-body,
+.popup-message-body{
+	position: relative;
+	@media (max-width:320px) {
+		margin-top: 250px;
+	}
+}
 
 .popup__item-email,
 .popup__item-password {
@@ -193,18 +206,32 @@ input[type=text] {
 .popup-change-password__btn,
 .popup-editing-data__btn {
 	position: absolute;
-	top: -1px;
-	right: -33px;
+	top: 0%;
+	right: -30px;
+	@media (max-width:320px) {
+		right: 90%;
+		top: -30px;
+	}
 }
 
 .popup-register__form,
 .popup-message__form,
 .popup-editing-data__form {
-	position: relative;
 	max-width: 680px;
 	padding: 40px;
 	background: #fff;
 	border: 2.5px solid #070707;
+	@media (max-width:320px) {
+		border: none;
+		padding: 0;
+	}
+}
+
+.popup-sign__form{
+	@media (max-width:320px) {
+		border: none;
+		padding: 0;
+	}
 }
 
 .popup-register__personal,
@@ -234,6 +261,9 @@ input[type=text] {
 .popup-editing-data__item {
 	flex: 1 1 50%;
 	padding: 0 10px;
+	@media (max-width:320px) {
+		flex: 1 1 100%;
+	}
 }
 
 .popup-editing-data__item:last-child {

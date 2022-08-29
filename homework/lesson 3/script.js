@@ -1,23 +1,11 @@
-//Function isNan
-
-let isNumber = (value) => {
-	if (value > 0) {
-		return true;
-	}
-	if (value = '' || ' ') {
-		console.log('Enter the valid number.');
-		return false;
-	}
-}
-
 /*1*/
 
 function checkAge() {
 	let age = prompt('Введите ваш возраст');
-	if (isNumber(age)) {
+	if (isPositiveNumber(age)) {
 		if (age < 18) {
 			console.log('Первое правило нашего клуба, никаких меньше 18!');
-			checkAge()
+			checkAge();
 		} else {
 			console.log('Все ОК!');
 		}
@@ -70,12 +58,8 @@ multiply(1, 2);
 /*3*/
 
 function addCreator(x) {
-	if (isNumber(x)) {
-		return function (y) {
-			if (isNumber(y)) {
-				return x + y;
-			}
-		}
+	return function (y) {
+		return x + y;
 	}
 }
 

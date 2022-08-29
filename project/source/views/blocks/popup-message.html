@@ -1,42 +1,47 @@
 <div class="popup-message" id="message">
 	<div class="container">
-		<form action="#" method="get" class="popup-message__form">
-			<ul class="popup-message__information">
-				<li class="popup-message__item"><label for="popup-message-name"
-						class="popup-message__label popup-message-name">
-						<p>What is your name? *</p>
+		<div class="popup-message-body">
+			<form action="#" method="get" class="popup-message__form">
+				<ul class="popup-message__information">
+					<li class="popup-message__item"><label for="popup-message-name"
+							class="popup-message__label popup-message-name">
+							<p>What is your name? *</p>
+						</label>
+						<input type="text" name="popup-message-name" id="popup-message-name">
+					</li>
+					<li class="popup-message__item"><label for="popup-message-message" class="popup-message__label">
+							<p>Message subject *</p>
+						</label>
+						<input type="text" name="popup-message-" id="popup-message-message">
+					</li>
+					<li class="popup-message__item"><label for="popup-message-email" class="popup-message__label">
+							<p>Your Email *</p>
+						</label>
+						<input type="text" name="popup-message-email" id="popup-message-email">
+					</li>
+					<li class="popup-message__item"><label for="popup-message-phone" class="popup-message__label">
+							<p>Your mobile phone *</p>
+						</label>
+						<input type="text" name="popup-message-phone" id="popup-message-phone">
+					</li>
+				</ul>
+				<div class="popup-message__discuss">
+					<label for="popup-message-area" class="popup-message__label">
+						<p>What do you want to discuss with me?</p>
 					</label>
-					<input type="text" name="popup-message-name" id="popup-message-name">
-				</li>
-				<li class="popup-message__item"><label for="popup-message-message" class="popup-message__label">
-						<p>Message subject *</p>
-					</label>
-					<input type="text" name="popup-message-" id="popup-message-message">
-				</li>
-				<li class="popup-message__item"><label for="popup-message-email" class="popup-message__label">
-						<p>Your Email *</p>
-					</label>
-					<input type="text" name="popup-message-email" id="popup-message-email">
-				</li>
-				<li class="popup-message__item"><label for="popup-message-phone" class="popup-message__label">
-						<p>Your mobile phone *</p>
-					</label>
-					<input type="text" name="popup-message-phone" id="popup-message-phone">
-				</li>
-			</ul>
-			<div class="popup-message__discuss">
-				<label for="popup-message-area" class="popup-message__label">
-					<p>What do you want to discuss with me?</p>
-				</label>
-				<input type="textarea" class="popup-message__area" name="popup-message-discuss" id="popup-message-discuss">
-			</div>
-			<button type="submit" class="popup-message-button btn">
-				Sign up
+					<input type="textarea" class="popup-message__area" name="popup-message-discuss"
+						id="popup-message-discuss">
+				</div>
+				<button type="submit" class="popup-message-button btn">
+					Sign up
+				</button>
+			</form>
+			<button class="popup-message__btn" type="button">
+				<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect x="2.82812" width="32" height="4" rx="2" transform="rotate(45 2.82812 0)" fill="#828282" />
+					<rect y="22.6289" width="32" height="4" rx="2" transform="rotate(-45 0 22.6289)" fill="#828282" />
+				</svg>
 			</button>
-			<button class="popup-message__btn">
-				<img src="../../img/icons/popup__close.png" alt="">
-			</button>
-		</form>
-
+		</div>
 	</div>
 </div>

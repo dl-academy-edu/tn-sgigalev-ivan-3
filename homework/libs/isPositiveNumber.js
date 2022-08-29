@@ -1,0 +1,1 @@
+const isPositiveNumber = (num) => num > 0;
