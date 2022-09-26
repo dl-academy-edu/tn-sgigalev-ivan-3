@@ -1,0 +1,169 @@
+//General styles
+
+.section-title {
+	font-weight: 700;
+	font-size: 34px;
+	line-height: 41px;
+}
+
+.text-general {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21px;
+
+	&_wht {
+		color: #fff;
+	}
+
+	&_semibold {
+		font-weight: 500;
+	}
+
+	&-bold {
+		font-weight: 700;
+	}
+
+	&_grey {
+		color: #e5e5e5;
+	}
+}
+
+.text-ltl {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	text-align: center;
+}
+
+img {
+	width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	vertical-align: top;
+	height: 100%;
+}
+
+.btn {
+	font-weight: 700;
+	color: #000;
+	display: inline-block;
+	padding: 7px 12px;
+	border: 2px solid #000;
+	border-radius: 18px;
+
+	&:hover {
+		color: white;
+		background: black;
+	}
+
+}
+
+.form__radio-label,
+.form__checkbox-label {
+	cursor: pointer;
+	color: $color-text;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 21px;
+}
+
+
+
+/*Content*/
+
+.content__title {
+	max-width: 280px;
+	font-weight: 700;
+	font-size: 47px;
+	line-height: 57px;
+}
+
+.header__link {
+	color: $color-link;
+	font-weight: 700;
+}
+
+.popup-editing-data__item:last-child {
+	max-width: 305px;
+}
+
+
+
+/*Validation*/
+
+.is-invalid {
+	border: 2px solid red;
+}
+
+.invalid-feedback {
+	color: red;
+}
+
+.preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	/* фоновый цвет */
+	background: transparent;
+	z-index: 1001;
+}
+
+.preloader__image {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	width: 70px;
+	height: 70px;
+	margin-top: -35px;
+	margin-left: -35px;
+	text-align: center;
+	animation: preloader-rotate 2s infinite linear;
+}
+
+@keyframes preloader-rotate {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.loaded_hiding .preloader {
+	transition: 0.3s opacity;
+	opacity: 0;
+}
+
+.loaded .preloader {
+	display: none;
+}
+
+//Popup-editing-data
+.popup-editing-data__personal {
+	margin: 0 -10px 20px;
+}
+
+.popup-editing-data-file {
+	margin-bottom: 20px;
+}
+
+.popup-editing-data__picture {
+	max-width: 290px;
+	border: 2.5px solid #e5e5e5;
+	max-height: 50px;
+	padding: 14px;
+}
+
+//Swiper
+
+.swiper{
+	width: 100%;
+}
+
+@media (max-width:320px) {
+	.main__burger-button {
+		display: block;
+		margin-bottom: 17px;
+		width: 32px;
+	}
+}

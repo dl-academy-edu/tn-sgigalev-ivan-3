@@ -1,0 +1,77 @@
+<form class="content-filter form" name="filter" action="blog.html" method="get">
+	<div class="content-filter__col tags">
+		<p class="content-filter__col-title">Tags</p>
+		<div class="content-filter__tags-list js-blogTags">
+		</div>
+	</div>
+	<div class="content-filter__col views">
+		<p class="content-filter__col-title">Views</p>
+		<div class="content-filter__group">
+			<input type="radio" id="viewChoice" class="form__radio" name="howView" value="100-500">
+			<label for="viewChoice" class="form__radio-label text__general">100-500</label>
+		</div>
+		<div class="content-filter__group">
+			<input type="radio" id="viewChoice1" class="form__radio" name="howView" value="500-1000">
+			<label for="viewChoice1" class="form__radio-label text__general">500-1000</label>
+		</div>
+		<div class="content-filter__group">
+			<input type="radio" id="viewChoice2" class="form__radio" name="howView" value="1000-2000">
+			<label for="viewChoice2" class="form__radio-label text__general">1000-2000</label>
+		</div>
+	</div>
+	<div class="content-filter__col comments">
+		<p class="content-filter__col-title">Comments</p>
+		<div class="content-filter__group">
+			<input type="checkbox" id="commentChoice" class="form__checkbox" value="0" name="commentsCount" value="0">
+			<label for="commentChoice" class="form__checkbox-label text__general">0</label>
+		</div>
+		<div class="content-filter__group">
+			<input type="checkbox" id="commentChoice1" class="form__checkbox" value="0-1" name="commentsCount" value="0-1">
+			<label for="commentChoice1" class="form__checkbox-label text__general">0-1</label>
+		</div>
+		<div class="content-filter__group">
+			<input type="checkbox" id="commentChoice2" class="form__checkbox" value="1-50" name="commentsCount"
+				value="1-50">
+			<label for="commentChoice2" class="form__checkbox-label text__general">1-50</label>
+		</div>
+	</div>
+	<div class="content-filter__col show">
+		<p class="content-filter__col-title">How show?</p>
+		<div class="content-filter__group">
+			<input type="radio" id="showChoice" class="form__radio" name="howShow" value="5">
+			<label for="showChoice" class="form__radio-label text__general">show 5</label>
+		</div>
+		<div class="content-filter__group">
+			<input type="radio" id="showChoice1" class="form__radio" name="howShow" value="10">
+			<label for="showChoice1" class="form__radio-label text__general">show 10</label>
+		</div>
+	</div>
+	<div class="content-filter__col sort">
+		<p class="content-filter__col-title">Sort by</p>
+		<div class="content-filter__group">
+			<input type="radio" id="sortChoice" class="form__radio" name="sortBy" value="date">
+			<label for="sortChoice" class="form__radio-label text__general">date</label>
+		</div>
+		<div class="content-filter__group">
+			<input type="radio" id="sortChoice1" class="form__radio" name="sortBy" value="title">
+			<label for="sortChoice1" class="form__radio-label text__general">title</label>
+		</div>
+		<div class="content-filter__group">
+			<input type="radio" id="sortChoice2" class="form__radio" name="sortBy" value="views">
+			<label for="sortChoice2" class="form__radio-label text__general">views</label>
+		</div>
+	</div>
+	<div class="content-filter__col reset">
+		<p class="reset__title text-general reset">reset form</p>
+		<button type="reset" class="btn content-filter__button">
+			Reset
+		</button>
+	</div>
+
+	<div class="content-filter__col content-filter__search search">
+		<input type="text" id="content-filter__text" name="search" class="content-filter__search-input">
+		<button type="search" class="btn content-filter__button content-filter__button-search">
+			Search
+		</button>
+	</div>
+</form>

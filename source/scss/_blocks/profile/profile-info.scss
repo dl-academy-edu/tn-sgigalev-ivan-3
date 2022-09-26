@@ -1,0 +1,29 @@
+.content__column {
+	display: flex;
+	flex-direction: column;
+}
+
+.content__column .content__personal {
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	align-items: flex-start;
+	li {
+		margin-bottom: 20px;
+	}
+}
+
+.content__text span {
+	margin-left: 20px;
+}
+.content__buttons {
+	display: flex;
+	flex-direction: column;
+}
+.content__button {
+	margin-bottom: 20px;
+	&:nth-last-child(-n+1) {
+		margin-bottom: 0;
+	}
+}

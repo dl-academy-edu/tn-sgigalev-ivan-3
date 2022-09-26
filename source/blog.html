@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="google" content="notranslate">
+	<meta name="format-detection" content="telephone=no">
+
+	<title>DL Academy</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<script>
+		var docElement = document.documentElement;
+		docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+	</script>
+
+	<!-- Favicon -->
+
+	<!-- build:css -->
+	<link href="css/style.min.css" rel="stylesheet">
+	<!-- endbuild -->
+</head>
+
+<body>
+	@@include('blocks/header.html')
+	<main class="content">
+		<div class="container">
+			<h1 class="content__title content__title-blog">My Blog</h1>
+			@@include('blocks/blog/blog-filter.html')
+			@@include('blocks/blog/blog-posts.html')
+		</div>
+	</main>
+	@@include('blocks/footer.html')
+	@@include('blocks/popups/popup-sign.html')
+	@@include('blocks/popups/popup-register.html')
+	@@include('blocks/popups/popup-message.html')
+	<script src="js/common.js"></script>
+	<script src="js/data.js"></script>
+	<script src="js/register.js"></script>
+	<script src="js/login.js"></script>
+</body>
+
+</html>

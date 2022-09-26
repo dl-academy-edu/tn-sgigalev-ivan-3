@@ -1,0 +1,64 @@
+<div class="popup popup-register">
+	<div class="popup-wrapper container">
+		<form action="#" method="get" class="popup-form" name="popupRegister">
+			<div class="popup__item popup__item-full">
+				<label for="popupRegisterEmail">
+					Email *
+				</label>
+				<input type="email" name="popupRegisterEmail" id="popupRegisterEmail" class="popup-input">
+			</div>
+			<div class="popup__item">
+				<label for="popupRegisterName" class="popup__label">
+					Name *
+				</label>
+				<input type="text" name="popupRegisterName" id="popupRegisterName" class="popup-input">
+			</div>
+			<div class="popup__item">
+				<label for="popupRegisterSurname" class="popup__label">
+					Surname *
+				</label>
+				<input type="text" name="popupRegisterSurname" id="popupRegisterSurname" class="popup-input">
+			</div>
+			<div class="popup__item">
+				<label for="popupRegisterPassword" class="popup__label">
+					Password *
+				</label>
+				<input type="password" name="popupRegisterPassword" id="popupRegisterPassword" autocomplete="on"
+					class="popup-input">
+			</div>
+			<div class="popup__item">
+				<label for="popupRegisterRepeat" class="popup__label">
+					Repeat password *
+				</label>
+				<input type="password" name="popupRegisterRepeat" id="popupRegisterRepeat" autocomplete="on"
+					class="popup-input">
+			</div>
+			<div class="popup__item">
+				<label for="popupRegisterLocation" class="popup__label">
+					Location *
+				</label>
+				<input type="text" name="popupRegisterLocation" id="popupRegisterLocation" class="popup-input">
+			</div>
+			<div class="popup__item">
+				<label for="popupRegisterAge" class="popup__label">
+					Age *
+				</label>
+				<input type="number" name="popupRegisterAge" id="popupRegisterAge" class="popup-input">
+			</div>
+			<div class="popup__consent">
+				<input type="checkbox" id="popupRegisterAgreement" name="popupRegisterAgreement" value="agree">
+				<label for="popupRegisterAgreement" class="text-ltl">
+					Clicking on the button, you consent to the processing of your personal data.
+				</label>
+			</div>
+			<button type="submit" class="popup-button btn">
+				Sign up
+			</button>
+		</form>
+		<button class="popup-btn popup-btn-reg" type="button">
+			<svg width="25" height="25">
+				<use xlink:href="/img/svg.svg#popup-close" />
+			</svg>
+		</button>
+	</div>
+</div>

@@ -1,0 +1,53 @@
+<div class="popup popup-editing-data" id="popup-editing-data">
+	<div class="popup-wrapper container">
+		<form action="#" method="get" class="popup-form" name="popupEditingData">
+			<div class="popup__item">
+				<label for="popupEditingDataEmail" class="popup__label">
+					Email *
+				</label>
+				<input type="email" name="popupEditingDataEmail" id="popupEditingDataEmail" class="popup-input">
+			</div>
+			<div class="popup__item">
+				<label for="popupEditingDataName" class="popup__label">
+					Name *
+				</label>
+				<input type="text" class="popup-input" name="popupEditingDataName" id="popupEditingDataName">
+			</div>
+			<div class="popup__item">
+				<label for="popupEditingDataSurname" class="popup__label">
+					Surname *
+				</label>
+				<input type="text" name="popupEditingDataSurname" id="popupEditingDataSurname" class="popup-input">
+			</div>
+			<div class="popup__item">
+				<label for="popupEditingDataLocation" class="popup__label">
+					Location *
+				</label>
+				<input type="text" name="popupEditingDataLocation" id="popupEditingDataLocation" class="popup-input">
+			</div>
+			<div class="popup__item">
+				<label for="popupEditingDataAge" class="popup__label">
+					Age *
+				</label>
+				<input type="number" name="popupEditingDataAge" id="popupEditingDataAge" class="popup-input">
+			</div>
+			<div class="popup__item popup__item-picture">
+				<label for="popupEditingDataFile" class="popup__label">
+					Profile picture
+				</label>
+				<input type="file" name="popupEditingDataFile" class="popup-editing-data__picture text-general"
+					id="popupEditingDataFile" placeholder=" ">
+			</div>
+			<div class="popup__item">
+				<button type="submit" class="popup-button popup-button_other btn">
+					Submit changes
+				</button>
+			</div>
+		</form>
+		<button class="popup-btn popup-btn-editing">
+			<svg width="25" height="25">
+				<use xlink:href="/img/svg.svg#popup-close" />
+			</svg>
+		</button>
+	</div>
+</div>
