@@ -12,10 +12,15 @@
 	}
 }
 
+.swiper-wrapper {
+	display: flex;
+	overflow: hidden;
+}
 
 .swiper-slide {
 	position: relative;
 	height: 604px;
+	flex-shrink: 0;
 	&-description {
 		position: absolute;
 		display: flex;
@@ -40,3 +45,6 @@
 	}
 }
 
+.swiper-slide-description-title {
+	color: #FFFFFF;
+}

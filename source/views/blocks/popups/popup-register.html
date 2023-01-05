@@ -1,6 +1,6 @@
 <div class="popup popup-register">
 	<div class="popup-wrapper container">
-		<form action="#" method="get" class="popup-form" name="popupRegister">
+		<form action="#" method="get" class="popup-form" name="popupRegister" novalidate>
 			<div class="popup__item popup__item-full">
 				<label for="popupRegisterEmail">
 					Email *
@@ -46,16 +46,17 @@
 				<input type="number" name="popupRegisterAge" id="popupRegisterAge" class="popup-input">
 			</div>
 			<div class="popup__consent">
-				<input type="checkbox" id="popupRegisterAgreement" name="popupRegisterAgreement" value="agree">
-				<label for="popupRegisterAgreement" class="text-ltl">
+				<input type="checkbox" id="popupRegisterAgreement" name="popupRegisterAgreement"
+					class="popup__consent-agreement">
+				<label for="popupRegisterAgreement" class="text-ltl popup__consent-text">
 					Clicking on the button, you consent to the processing of your personal data.
 				</label>
 			</div>
-			<button type="submit" class="popup-button btn">
+			<button type="submit" class="btn popup-button popup-button-reg">
 				Sign up
 			</button>
 		</form>
-		<button class="popup-btn popup-btn-reg" type="button">
+		<button class="popup-btn popup-btn-reg-close" type="button">
 			<svg width="25" height="25">
 				<use xlink:href="/img/svg.svg#popup-close" />
 			</svg>
