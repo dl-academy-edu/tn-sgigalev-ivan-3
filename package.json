@@ -2,7 +2,6 @@
   "name": "dl-academy-markup-template",
   "version": "1.0.0",
   "private": true,
-  "type": "commonjs",
   "description": "Markup template",
   "author": "DirectLine Development",
   "main": "gulpfile.js",

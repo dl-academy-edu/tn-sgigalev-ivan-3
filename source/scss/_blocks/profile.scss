@@ -14,13 +14,11 @@
 	}
 }
 .content__canvas {
+	margin-right: 50px;
 	max-width: 320px;
 	margin-bottom: 40px;
 	@media (min-width: 480px) {
-		margin-right: 105px;
+		width: 320px;
+		height: 450px;
 	}
-}
-.main__canvas-image {
-	max-width: 320px;
-	max-height: 450px;
 }

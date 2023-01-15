@@ -11,10 +11,6 @@ let numberSlides = innerWrapper.childElementCount - 1;
 let activeSlide = 0;
 let timerID;
 
-const updateStrCount = () => {
-	+localStorage.getItem("activeSlide")
-};
-
 const timerLogic = () => {
 	if (timerID) clearTimeout(timerID);
 	timerID = setTimeout(() => {
@@ -39,6 +35,7 @@ const changeActivePoint = (index) => {
 		? buttonNext.setAttribute("disabled", "disabled")
 		: buttonNext.removeAttribute("disabled");
 };
+
 const changeActiveSlide = (whereTo) => {
 	const indentML = +innerWrapper.style.marginLeft.split("px")[0];
 	innerWrapper.style.transition = "margin-left .5s";
@@ -52,6 +49,7 @@ const changeActiveSlide = (whereTo) => {
 			}
 			if (activeSlide === numberSlides) {
 				buttonNext.setAttribute("disabled", "disabled");
+				localStorage.setItem('activeSlide', activeSlide)
 			}
 			break;
 		case "back":
@@ -63,12 +61,18 @@ const changeActiveSlide = (whereTo) => {
 			}
 			if (activeSlide === 0) {
 				buttonBack.setAttribute("disabled", "disabled");
+				localStorage.setItem('activeSlide', activeSlide)
 			}
 			break;
 	}
+
 	changeActivePoint(activeSlide);
 	timerLogic();
 };
+
+const renderCorrectSlide = (activeSlide) => {
+	innerWrapper.style.marginLeft = `${-(activeSlide * shearWidth)}px`;
+}
 
 buttonBack.setAttribute("disabled", "disabled");
 addWidthSlides();
@@ -87,6 +91,15 @@ for (i = 0; i < innerWrapper.children.length; i++) {
 	});
 	pagination.append(newElem);
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+	+ localStorage.getItem('activeSlide')
+		? activeSlide = +localStorage.getItem('activeSlide')
+		: activeSlide = 0
+	renderCorrectSlide(activeSlide)
+	changeActivePoint(activeSlide);
+})
+
 buttonBack.addEventListener("click", () => changeActiveSlide("back"));
 buttonNext.addEventListener("click", () => changeActiveSlide("next"));
 window.addEventListener("resize", () => {
@@ -97,4 +110,3 @@ window.addEventListener("resize", () => {
 	}
 });
 
-updateStrCount(); 
